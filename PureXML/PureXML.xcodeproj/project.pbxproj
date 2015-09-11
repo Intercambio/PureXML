@@ -147,6 +147,41 @@
 			name = "Value Transformer";
 			sourceTree = "<group>";
 		};
+		F612A3B51BA346CE0014DEEE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6D831521BA32E2D008C9594 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F612A3B61BA346EB0014DEEE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8315E1BA32E2D008C9594 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F612A3B71BA346F40014DEEE /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				F6D831B11BA33EA3008C9594 /* PXDocumentTests.m */,
+				F612A3B81BA346FC0014DEEE /* Nodes */,
+			);
+			name = Document;
+			sourceTree = "<group>";
+		};
+		F612A3B81BA346FC0014DEEE /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				F6D831B31BA33EA3008C9594 /* PXNodeTests.m */,
+				F6D831B21BA33EA3008C9594 /* PXElementTests.m */,
+				F6D831B41BA33EA3008C9594 /* PXTextTests.m */,
+			);
+			name = Nodes;
+			sourceTree = "<group>";
+		};
 		F6D831411BA32E12008C9594 = {
 			isa = PBXGroup;
 			children = (
@@ -174,7 +209,7 @@
 				F6D831501BA32E2D008C9594 /* PureXML.h */,
 				F6D831831BA33ADD008C9594 /* Document */,
 				F612A3B41BA3468D0014DEEE /* Value Transformer */,
-				F6D831521BA32E2D008C9594 /* Info.plist */,
+				F612A3B51BA346CE0014DEEE /* Supporting Files */,
 			);
 			path = PureXML;
 			sourceTree = "<group>";
@@ -182,12 +217,9 @@
 		F6D8315B1BA32E2D008C9594 /* PureXMLTests */ = {
 			isa = PBXGroup;
 			children = (
-				F6D831B11BA33EA3008C9594 /* PXDocumentTests.m */,
-				F6D831B31BA33EA3008C9594 /* PXNodeTests.m */,
-				F6D831B21BA33EA3008C9594 /* PXElementTests.m */,
-				F6D831B41BA33EA3008C9594 /* PXTextTests.m */,
+				F612A3B71BA346F40014DEEE /* Document */,
 				F6D831BD1BA33F8B008C9594 /* Data */,
-				F6D8315E1BA32E2D008C9594 /* Info.plist */,
+				F612A3B61BA346EB0014DEEE /* Supporting Files */,
 			);
 			path = PureXMLTests;
 			sourceTree = "<group>";
