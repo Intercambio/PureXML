@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F612A3B01BA346850014DEEE /* PXDocumentValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = F612A3AE1BA346850014DEEE /* PXDocumentValueTransformer.h */; settings = {ASSET_TAGS = (); }; };
+		F612A3B11BA346850014DEEE /* PXDocumentValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = F612A3AE1BA346850014DEEE /* PXDocumentValueTransformer.h */; settings = {ASSET_TAGS = (); }; };
+		F612A3B21BA346850014DEEE /* PXDocumentValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = F612A3AF1BA346850014DEEE /* PXDocumentValueTransformer.m */; settings = {ASSET_TAGS = (); }; };
+		F612A3B31BA346850014DEEE /* PXDocumentValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = F612A3AF1BA346850014DEEE /* PXDocumentValueTransformer.m */; settings = {ASSET_TAGS = (); }; };
 		F6D831511BA32E2D008C9594 /* PureXML.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D831501BA32E2D008C9594 /* PureXML.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6D831581BA32E2D008C9594 /* PureXMLiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8314D1BA32E2D008C9594 /* PureXMLiOS.framework */; settings = {ASSET_TAGS = (); }; };
 		F6D831741BA32EAB008C9594 /* PureXMLOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8316A1BA32EAB008C9594 /* PureXMLOSX.framework */; settings = {ASSET_TAGS = (); }; };
@@ -67,6 +71,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F612A3AE1BA346850014DEEE /* PXDocumentValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXDocumentValueTransformer.h; sourceTree = "<group>"; };
+		F612A3AF1BA346850014DEEE /* PXDocumentValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXDocumentValueTransformer.m; sourceTree = "<group>"; };
 		F6D8314D1BA32E2D008C9594 /* PureXMLiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PureXMLiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D831501BA32E2D008C9594 /* PureXML.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PureXML.h; sourceTree = "<group>"; };
 		F6D831521BA32E2D008C9594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -132,6 +138,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F612A3B41BA3468D0014DEEE /* Value Transformer */ = {
+			isa = PBXGroup;
+			children = (
+				F612A3AE1BA346850014DEEE /* PXDocumentValueTransformer.h */,
+				F612A3AF1BA346850014DEEE /* PXDocumentValueTransformer.m */,
+			);
+			name = "Value Transformer";
+			sourceTree = "<group>";
+		};
 		F6D831411BA32E12008C9594 = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +173,7 @@
 			children = (
 				F6D831501BA32E2D008C9594 /* PureXML.h */,
 				F6D831831BA33ADD008C9594 /* Document */,
+				F612A3B41BA3468D0014DEEE /* Value Transformer */,
 				F6D831521BA32E2D008C9594 /* Info.plist */,
 			);
 			path = PureXML;
@@ -227,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6D831A21BA33DA2008C9594 /* PXText.h in Headers */,
+				F612A3B01BA346850014DEEE /* PXDocumentValueTransformer.h in Headers */,
 				F6D831A01BA33DA2008C9594 /* PXNode+Private.h in Headers */,
 				F6D831991BA33CC1008C9594 /* PXDocument+Private.h in Headers */,
 				F6D8318D1BA33BAB008C9594 /* PXNode.h in Headers */,
@@ -241,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6D831A31BA33DA2008C9594 /* PXText.h in Headers */,
+				F612A3B11BA346850014DEEE /* PXDocumentValueTransformer.h in Headers */,
 				F6D831A11BA33DA2008C9594 /* PXNode+Private.h in Headers */,
 				F6D8319A1BA33CC1008C9594 /* PXDocument+Private.h in Headers */,
 				F6D8318E1BA33BAB008C9594 /* PXNode.h in Headers */,
@@ -413,6 +431,7 @@
 				F6D831881BA33B0B008C9594 /* PXDocument.m in Sources */,
 				F6D8318F1BA33BAB008C9594 /* PXNode.m in Sources */,
 				F6D831951BA33C17008C9594 /* PXElement.m in Sources */,
+				F612A3B21BA346850014DEEE /* PXDocumentValueTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +454,7 @@
 				F6D831891BA33B0B008C9594 /* PXDocument.m in Sources */,
 				F6D831901BA33BAB008C9594 /* PXNode.m in Sources */,
 				F6D831961BA33C17008C9594 /* PXElement.m in Sources */,
+				F612A3B31BA346850014DEEE /* PXDocumentValueTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
