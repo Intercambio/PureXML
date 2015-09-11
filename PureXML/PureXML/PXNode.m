@@ -79,17 +79,31 @@
         xmlXPathObjectPtr xpathObj;
         
         xpathCtx = xmlXPathNewContext(self.document.xmlDoc);
-        NSAssert(xpathCtx, @"Unable to create new XPath context.");
-        
+        if (!xpathCtx) {
+            [[NSException exceptionWithName:NSInternalInconsistencyException
+                                     reason:@"Unable to create new XPath context."
+                                   userInfo:nil] raise];
+        }
+
         xmlXPathSetContextNode(self.xmlNode, xpathCtx);
         
         [namespaces enumerateKeysAndObjectsUsingBlock:^(NSString *prefix, NSString *href, BOOL *stop) {
             BOOL success = xmlXPathRegisterNs(xpathCtx, BAD_CAST [prefix UTF8String], BAD_CAST [href UTF8String]) == 0;
-            NSAssert(success, @"Unable to register namespace '%@' using prefix '%@'.", href, prefix);
+            if (!success) {
+                xmlXPathFreeContext(xpathCtx);
+                [[NSException exceptionWithName:NSInternalInconsistencyException
+                                         reason:[NSString stringWithFormat:@"Unable to register namespace '%@' using prefix '%@'.", href, prefix]
+                                       userInfo:nil] raise];
+            }
         }];
         
         xpathObj = xmlXPathEvalExpression(BAD_CAST [xpath UTF8String], xpathCtx);
-        NSAssert(xpathObj, @"Unable to evaluate xpath expression '%@'.", xpath);
+        if (!xpathObj) {
+            xmlXPathFreeContext(xpathCtx);
+            [[NSException exceptionWithName:NSInternalInconsistencyException
+                                     reason:[NSString stringWithFormat:@"Unable to evaluate xpath expression '%@'.", xpath]
+                                   userInfo:nil] raise];
+        }
         
         NSUInteger numberOfNodes = (xpathObj->nodesetval) ? xpathObj->nodesetval->nodeNr : 0;
         BOOL stop = NO;
