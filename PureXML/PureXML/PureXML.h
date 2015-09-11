@@ -3,17 +3,11 @@
 //  PureXML
 //
 //  Created by Tobias Kräntzer on 11.09.15.
+//  Copyright (c) 2014 Tobias Kräntzer. All rights reserved.
 //
-//
 
-#import <UIKit/UIKit.h>
-
-//! Project version number for PureXMLiOS.
-FOUNDATION_EXPORT double PureXMLVersionNumber;
-
-//! Project version string for PureXMLiOS.
-FOUNDATION_EXPORT const unsigned char PureXMLVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <PureXMLiOS/PublicHeader.h>
-
+#import "PXDocument.h"
+#import "PXNode.h"
+#import "PXElement.h"
+#import "PXText.h"
 

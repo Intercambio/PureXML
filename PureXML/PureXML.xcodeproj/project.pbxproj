@@ -9,10 +9,44 @@
 /* Begin PBXBuildFile section */
 		F6D831511BA32E2D008C9594 /* PureXML.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D831501BA32E2D008C9594 /* PureXML.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6D831581BA32E2D008C9594 /* PureXMLiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8314D1BA32E2D008C9594 /* PureXMLiOS.framework */; settings = {ASSET_TAGS = (); }; };
-		F6D8315D1BA32E2D008C9594 /* PureXMLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8315C1BA32E2D008C9594 /* PureXMLTests.m */; };
 		F6D831741BA32EAB008C9594 /* PureXMLOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8316A1BA32EAB008C9594 /* PureXMLOSX.framework */; settings = {ASSET_TAGS = (); }; };
 		F6D831811BA339A4008C9594 /* PureXML.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D831501BA32E2D008C9594 /* PureXML.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F6D831821BA339B2008C9594 /* PureXMLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8315C1BA32E2D008C9594 /* PureXMLTests.m */; settings = {ASSET_TAGS = (); }; };
+		F6D831861BA33B0B008C9594 /* PXDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D831841BA33B0B008C9594 /* PXDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6D831871BA33B0B008C9594 /* PXDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D831841BA33B0B008C9594 /* PXDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6D831881BA33B0B008C9594 /* PXDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831851BA33B0B008C9594 /* PXDocument.m */; settings = {ASSET_TAGS = (); }; };
+		F6D831891BA33B0B008C9594 /* PXDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831851BA33B0B008C9594 /* PXDocument.m */; settings = {ASSET_TAGS = (); }; };
+		F6D8318D1BA33BAB008C9594 /* PXNode.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D8318B1BA33BAB008C9594 /* PXNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6D8318E1BA33BAB008C9594 /* PXNode.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D8318B1BA33BAB008C9594 /* PXNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6D8318F1BA33BAB008C9594 /* PXNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8318C1BA33BAB008C9594 /* PXNode.m */; settings = {ASSET_TAGS = (); }; };
+		F6D831901BA33BAB008C9594 /* PXNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8318C1BA33BAB008C9594 /* PXNode.m */; settings = {ASSET_TAGS = (); }; };
+		F6D831931BA33C17008C9594 /* PXElement.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D831911BA33C17008C9594 /* PXElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6D831941BA33C17008C9594 /* PXElement.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D831911BA33C17008C9594 /* PXElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6D831951BA33C17008C9594 /* PXElement.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831921BA33C17008C9594 /* PXElement.m */; settings = {ASSET_TAGS = (); }; };
+		F6D831961BA33C17008C9594 /* PXElement.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831921BA33C17008C9594 /* PXElement.m */; settings = {ASSET_TAGS = (); }; };
+		F6D831991BA33CC1008C9594 /* PXDocument+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D831971BA33CC1008C9594 /* PXDocument+Private.h */; settings = {ASSET_TAGS = (); }; };
+		F6D8319A1BA33CC1008C9594 /* PXDocument+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D831971BA33CC1008C9594 /* PXDocument+Private.h */; settings = {ASSET_TAGS = (); }; };
+		F6D831A01BA33DA2008C9594 /* PXNode+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D8319D1BA33DA2008C9594 /* PXNode+Private.h */; settings = {ASSET_TAGS = (); }; };
+		F6D831A11BA33DA2008C9594 /* PXNode+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D8319D1BA33DA2008C9594 /* PXNode+Private.h */; settings = {ASSET_TAGS = (); }; };
+		F6D831A21BA33DA2008C9594 /* PXText.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D8319E1BA33DA2008C9594 /* PXText.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6D831A31BA33DA2008C9594 /* PXText.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D8319E1BA33DA2008C9594 /* PXText.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6D831A41BA33DA2008C9594 /* PXText.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8319F1BA33DA2008C9594 /* PXText.m */; settings = {ASSET_TAGS = (); }; };
+		F6D831A51BA33DA2008C9594 /* PXText.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8319F1BA33DA2008C9594 /* PXText.m */; settings = {ASSET_TAGS = (); }; };
+		F6D831AC1BA33E30008C9594 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D831AB1BA33E30008C9594 /* libxml2.tbd */; };
+		F6D831AE1BA33E39008C9594 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D831AD1BA33E39008C9594 /* libxml2.tbd */; };
+		F6D831AF1BA33E57008C9594 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D831AD1BA33E39008C9594 /* libxml2.tbd */; };
+		F6D831B01BA33E5D008C9594 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D831AB1BA33E30008C9594 /* libxml2.tbd */; };
+		F6D831B51BA33EA3008C9594 /* PXDocumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B11BA33EA3008C9594 /* PXDocumentTests.m */; settings = {ASSET_TAGS = (); }; };
+		F6D831B61BA33EA3008C9594 /* PXDocumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B11BA33EA3008C9594 /* PXDocumentTests.m */; settings = {ASSET_TAGS = (); }; };
+		F6D831B71BA33EA3008C9594 /* PXElementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B21BA33EA3008C9594 /* PXElementTests.m */; settings = {ASSET_TAGS = (); }; };
+		F6D831B81BA33EA3008C9594 /* PXElementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B21BA33EA3008C9594 /* PXElementTests.m */; settings = {ASSET_TAGS = (); }; };
+		F6D831B91BA33EA3008C9594 /* PXNodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B31BA33EA3008C9594 /* PXNodeTests.m */; settings = {ASSET_TAGS = (); }; };
+		F6D831BA1BA33EA3008C9594 /* PXNodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B31BA33EA3008C9594 /* PXNodeTests.m */; settings = {ASSET_TAGS = (); }; };
+		F6D831BB1BA33EA3008C9594 /* PXTextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B41BA33EA3008C9594 /* PXTextTests.m */; settings = {ASSET_TAGS = (); }; };
+		F6D831BC1BA33EA3008C9594 /* PXTextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B41BA33EA3008C9594 /* PXTextTests.m */; settings = {ASSET_TAGS = (); }; };
+		F6D831BF1BA33F9A008C9594 /* simpleDocument.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6D831BE1BA33F9A008C9594 /* simpleDocument.xml */; settings = {ASSET_TAGS = (); }; };
+		F6D831C01BA33F9A008C9594 /* simpleDocument.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6D831BE1BA33F9A008C9594 /* simpleDocument.xml */; settings = {ASSET_TAGS = (); }; };
+		F6D831C21BA33FAC008C9594 /* text.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6D831C11BA33FAC008C9594 /* text.xml */; settings = {ASSET_TAGS = (); }; };
+		F6D831C31BA33FAC008C9594 /* text.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6D831C11BA33FAC008C9594 /* text.xml */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +71,27 @@
 		F6D831501BA32E2D008C9594 /* PureXML.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PureXML.h; sourceTree = "<group>"; };
 		F6D831521BA32E2D008C9594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6D831571BA32E2D008C9594 /* PureXMLiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PureXMLiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6D8315C1BA32E2D008C9594 /* PureXMLTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PureXMLTests.m; sourceTree = "<group>"; };
 		F6D8315E1BA32E2D008C9594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6D8316A1BA32EAB008C9594 /* PureXMLOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PureXMLOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D831731BA32EAB008C9594 /* PureXMLOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PureXMLOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6D831841BA33B0B008C9594 /* PXDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXDocument.h; sourceTree = "<group>"; };
+		F6D831851BA33B0B008C9594 /* PXDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXDocument.m; sourceTree = "<group>"; };
+		F6D8318B1BA33BAB008C9594 /* PXNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXNode.h; sourceTree = "<group>"; };
+		F6D8318C1BA33BAB008C9594 /* PXNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXNode.m; sourceTree = "<group>"; };
+		F6D831911BA33C17008C9594 /* PXElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXElement.h; sourceTree = "<group>"; };
+		F6D831921BA33C17008C9594 /* PXElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXElement.m; sourceTree = "<group>"; };
+		F6D831971BA33CC1008C9594 /* PXDocument+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PXDocument+Private.h"; sourceTree = "<group>"; };
+		F6D8319D1BA33DA2008C9594 /* PXNode+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PXNode+Private.h"; sourceTree = "<group>"; };
+		F6D8319E1BA33DA2008C9594 /* PXText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXText.h; sourceTree = "<group>"; };
+		F6D8319F1BA33DA2008C9594 /* PXText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXText.m; sourceTree = "<group>"; };
+		F6D831AB1BA33E30008C9594 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		F6D831AD1BA33E39008C9594 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/usr/lib/libxml2.tbd; sourceTree = DEVELOPER_DIR; };
+		F6D831B11BA33EA3008C9594 /* PXDocumentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXDocumentTests.m; sourceTree = "<group>"; };
+		F6D831B21BA33EA3008C9594 /* PXElementTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXElementTests.m; sourceTree = "<group>"; };
+		F6D831B31BA33EA3008C9594 /* PXNodeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXNodeTests.m; sourceTree = "<group>"; };
+		F6D831B41BA33EA3008C9594 /* PXTextTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXTextTests.m; sourceTree = "<group>"; };
+		F6D831BE1BA33F9A008C9594 /* simpleDocument.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = simpleDocument.xml; sourceTree = "<group>"; };
+		F6D831C11BA33FAC008C9594 /* text.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = text.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6D831AF1BA33E57008C9594 /* libxml2.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6D831AE1BA33E39008C9594 /* libxml2.tbd in Frameworks */,
 				F6D831581BA32E2D008C9594 /* PureXMLiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6D831B01BA33E5D008C9594 /* libxml2.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6D831AC1BA33E30008C9594 /* libxml2.tbd in Frameworks */,
 				F6D831741BA32EAB008C9594 /* PureXMLOSX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +137,7 @@
 			children = (
 				F6D8314F1BA32E2D008C9594 /* PureXML */,
 				F6D8315B1BA32E2D008C9594 /* PureXMLTests */,
+				F6D831AA1BA33E21008C9594 /* Frameworks */,
 				F6D8314E1BA32E2D008C9594 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				F6D831501BA32E2D008C9594 /* PureXML.h */,
+				F6D831831BA33ADD008C9594 /* Document */,
 				F6D831521BA32E2D008C9594 /* Info.plist */,
 			);
 			path = PureXML;
@@ -109,10 +166,57 @@
 		F6D8315B1BA32E2D008C9594 /* PureXMLTests */ = {
 			isa = PBXGroup;
 			children = (
-				F6D8315C1BA32E2D008C9594 /* PureXMLTests.m */,
+				F6D831B11BA33EA3008C9594 /* PXDocumentTests.m */,
+				F6D831B31BA33EA3008C9594 /* PXNodeTests.m */,
+				F6D831B21BA33EA3008C9594 /* PXElementTests.m */,
+				F6D831B41BA33EA3008C9594 /* PXTextTests.m */,
+				F6D831BD1BA33F8B008C9594 /* Data */,
 				F6D8315E1BA32E2D008C9594 /* Info.plist */,
 			);
 			path = PureXMLTests;
+			sourceTree = "<group>";
+		};
+		F6D831831BA33ADD008C9594 /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				F6D831841BA33B0B008C9594 /* PXDocument.h */,
+				F6D831851BA33B0B008C9594 /* PXDocument.m */,
+				F6D831971BA33CC1008C9594 /* PXDocument+Private.h */,
+				F6D8318A1BA33B93008C9594 /* Nodes */,
+			);
+			name = Document;
+			sourceTree = "<group>";
+		};
+		F6D8318A1BA33B93008C9594 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				F6D8318B1BA33BAB008C9594 /* PXNode.h */,
+				F6D8318C1BA33BAB008C9594 /* PXNode.m */,
+				F6D8319D1BA33DA2008C9594 /* PXNode+Private.h */,
+				F6D831911BA33C17008C9594 /* PXElement.h */,
+				F6D831921BA33C17008C9594 /* PXElement.m */,
+				F6D8319E1BA33DA2008C9594 /* PXText.h */,
+				F6D8319F1BA33DA2008C9594 /* PXText.m */,
+			);
+			name = Nodes;
+			sourceTree = "<group>";
+		};
+		F6D831AA1BA33E21008C9594 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6D831AD1BA33E39008C9594 /* libxml2.tbd */,
+				F6D831AB1BA33E30008C9594 /* libxml2.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6D831BD1BA33F8B008C9594 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F6D831BE1BA33F9A008C9594 /* simpleDocument.xml */,
+				F6D831C11BA33FAC008C9594 /* text.xml */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,7 +226,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6D831A21BA33DA2008C9594 /* PXText.h in Headers */,
+				F6D831A01BA33DA2008C9594 /* PXNode+Private.h in Headers */,
+				F6D831991BA33CC1008C9594 /* PXDocument+Private.h in Headers */,
+				F6D8318D1BA33BAB008C9594 /* PXNode.h in Headers */,
 				F6D831511BA32E2D008C9594 /* PureXML.h in Headers */,
+				F6D831861BA33B0B008C9594 /* PXDocument.h in Headers */,
+				F6D831931BA33C17008C9594 /* PXElement.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +240,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6D831A31BA33DA2008C9594 /* PXText.h in Headers */,
+				F6D831A11BA33DA2008C9594 /* PXNode+Private.h in Headers */,
+				F6D8319A1BA33CC1008C9594 /* PXDocument+Private.h in Headers */,
+				F6D8318E1BA33BAB008C9594 /* PXNode.h in Headers */,
 				F6D831811BA339A4008C9594 /* PureXML.h in Headers */,
+				F6D831871BA33B0B008C9594 /* PXDocument.h in Headers */,
+				F6D831941BA33C17008C9594 /* PXElement.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +381,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6D831C21BA33FAC008C9594 /* text.xml in Resources */,
+				F6D831BF1BA33F9A008C9594 /* simpleDocument.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +397,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6D831C31BA33FAC008C9594 /* text.xml in Resources */,
+				F6D831C01BA33F9A008C9594 /* simpleDocument.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +409,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6D831A41BA33DA2008C9594 /* PXText.m in Sources */,
+				F6D831881BA33B0B008C9594 /* PXDocument.m in Sources */,
+				F6D8318F1BA33BAB008C9594 /* PXNode.m in Sources */,
+				F6D831951BA33C17008C9594 /* PXElement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +420,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6D8315D1BA32E2D008C9594 /* PureXMLTests.m in Sources */,
+				F6D831BB1BA33EA3008C9594 /* PXTextTests.m in Sources */,
+				F6D831B51BA33EA3008C9594 /* PXDocumentTests.m in Sources */,
+				F6D831B91BA33EA3008C9594 /* PXNodeTests.m in Sources */,
+				F6D831B71BA33EA3008C9594 /* PXElementTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +431,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6D831A51BA33DA2008C9594 /* PXText.m in Sources */,
+				F6D831891BA33B0B008C9594 /* PXDocument.m in Sources */,
+				F6D831901BA33BAB008C9594 /* PXNode.m in Sources */,
+				F6D831961BA33C17008C9594 /* PXElement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,7 +442,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6D831821BA339B2008C9594 /* PureXMLTests.m in Sources */,
+				F6D831BC1BA33EA3008C9594 /* PXTextTests.m in Sources */,
+				F6D831B61BA33EA3008C9594 /* PXDocumentTests.m in Sources */,
+				F6D831BA1BA33EA3008C9594 /* PXNodeTests.m in Sources */,
+				F6D831B81BA33EA3008C9594 /* PXElementTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +468,7 @@
 		F6D831461BA32E12008C9594 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 			};
@@ -342,6 +477,7 @@
 		F6D831471BA32E12008C9594 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 			};
@@ -756,6 +892,7 @@
 				F6D831611BA32E2D008C9594 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F6D831621BA32E2D008C9594 /* Build configuration list for PBXNativeTarget "PureXMLiOSTests" */ = {
 			isa = XCConfigurationList;
@@ -764,6 +901,7 @@
 				F6D831641BA32E2D008C9594 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F6D8317B1BA32EAB008C9594 /* Build configuration list for PBXNativeTarget "PureXMLOSX" */ = {
 			isa = XCConfigurationList;
@@ -772,6 +910,7 @@
 				F6D8317D1BA32EAB008C9594 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F6D8317E1BA32EAB008C9594 /* Build configuration list for PBXNativeTarget "PureXMLOSXTests" */ = {
 			isa = XCConfigurationList;
@@ -780,6 +919,7 @@
 				F6D831801BA32EAB008C9594 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
