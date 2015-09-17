@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Tobias Kräntzer. All rights reserved.
 //
 
+#import <libxml/tree.h>
+
 #import "PXDocument.h"
 #import "PXDocument+Private.h"
 #import "PXNode+Private.h"

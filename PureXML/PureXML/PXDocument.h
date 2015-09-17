@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <libxml/tree.h>
+
+typedef struct _xmlDoc xmlDoc;
+typedef xmlDoc *xmlDocPtr;
 
 @class PXElement;
 

@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Tobias Kräntzer. All rights reserved.
 //
 
+#import <libxml/tree.h>
 #import <libxml/xpath.h>
 #import <libxml/xpathInternals.h>
 

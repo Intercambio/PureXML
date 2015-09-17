@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <libxml/tree.h>
+
+typedef struct _xmlNode xmlNode;
+typedef xmlNode *xmlNodePtr;
 
 @class PXDocument;
 
