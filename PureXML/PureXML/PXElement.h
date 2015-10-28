@@ -21,23 +21,23 @@
 
 #pragma mark Attributes
 - (id)valueForAttribute:(NSString *)name;
-- (id)valueForAttribute:(NSString *)name inNamespace:(NSString *)namespace;
-- (void)enumerateAttributesUsingBlock:(void(^)(NSString *name, id value, NSString *namespace, BOOL *stop))block;
+- (id)valueForAttribute:(NSString *)name inNamespace:(NSString *) namespace;
+- (void)enumerateAttributesUsingBlock:(void (^)(NSString *name, id value, NSString *namespace, BOOL *stop))block;
 
 - (void)setValue:(id)value forAttribute:(NSString *)name;
-- (void)setValue:(id)value forAttribute:(NSString *)name inNamespace:(NSString *)namespace;
+- (void)setValue:(id)value forAttribute:(NSString *)name inNamespace:(NSString *) namespace;
 
 #pragma mark Children
 - (NSUInteger)numberOfChildren;
 - (PXNode *)childAtIndex:(NSUInteger)index;
-- (void)enumerateChildrenUsingBlock:(void(^)(PXNode *child, BOOL *stop))block;
+- (void)enumerateChildrenUsingBlock:(void (^)(PXNode *child, BOOL *stop))block;
 
 #pragma mark Elements
 - (NSUInteger)numberOfElements;
 - (PXElement *)elementAtIndex:(NSUInteger)index;
-- (void)enumerateElementsUsingBlock:(void(^)(PXElement *element, BOOL *stop))block;
+- (void)enumerateElementsUsingBlock:(void (^)(PXElement *element, BOOL *stop))block;
 
-- (PXElement *)addElementWithName:(NSString *)name namespace:(NSString *)namespace content:(NSString *)content;
+- (PXElement *)addElementWithName:(NSString *)name namespace:(NSString *) namespace content:(NSString *)content;
 - (PXElement *)addElement:(PXElement *)element;
 
 @end

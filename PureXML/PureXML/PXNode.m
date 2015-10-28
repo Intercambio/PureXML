@@ -73,12 +73,12 @@
 
 - (void)enumerateNodesForXPath:(NSString *)xpath
                usingNamespaces:(NSDictionary *)namespaces
-                         block:(void(^)(PXNode *element, BOOL *stop))block
+                         block:(void (^)(PXNode *element, BOOL *stop))block
 {
     if (block != nil) {
         xmlXPathContextPtr xpathCtx;
         xmlXPathObjectPtr xpathObj;
-        
+
         xpathCtx = xmlXPathNewContext(self.document.xmlDoc);
         if (!xpathCtx) {
             [[NSException exceptionWithName:NSInternalInconsistencyException
@@ -87,9 +87,9 @@
         }
 
         xmlXPathSetContextNode(self.xmlNode, xpathCtx);
-        
+
         [namespaces enumerateKeysAndObjectsUsingBlock:^(NSString *prefix, NSString *href, BOOL *stop) {
-            BOOL success = xmlXPathRegisterNs(xpathCtx, BAD_CAST [prefix UTF8String], BAD_CAST [href UTF8String]) == 0;
+            BOOL success = xmlXPathRegisterNs(xpathCtx, BAD_CAST[prefix UTF8String], BAD_CAST[href UTF8String]) == 0;
             if (!success) {
                 xmlXPathFreeContext(xpathCtx);
                 [[NSException exceptionWithName:NSInternalInconsistencyException
@@ -97,15 +97,15 @@
                                        userInfo:nil] raise];
             }
         }];
-        
-        xpathObj = xmlXPathEvalExpression(BAD_CAST [xpath UTF8String], xpathCtx);
+
+        xpathObj = xmlXPathEvalExpression(BAD_CAST[xpath UTF8String], xpathCtx);
         if (!xpathObj) {
             xmlXPathFreeContext(xpathCtx);
             [[NSException exceptionWithName:NSInternalInconsistencyException
                                      reason:[NSString stringWithFormat:@"Unable to evaluate xpath expression '%@'.", xpath]
                                    userInfo:nil] raise];
         }
-        
+
         NSUInteger numberOfNodes = (xpathObj->nodesetval) ? xpathObj->nodesetval->nodeNr : 0;
         BOOL stop = NO;
         for (int i = 0; i < numberOfNodes && stop == NO; i++) {
@@ -113,7 +113,7 @@
             PXNode *node = [self.document nodeWithXmlNode:xmlNode];
             block(node, &stop);
         }
-        
+
         xmlXPathFreeObject(xpathObj);
         xmlXPathFreeContext(xpathCtx);
     }
@@ -141,4 +141,3 @@
 }
 
 @end
-

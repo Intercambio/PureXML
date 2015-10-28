@@ -29,7 +29,7 @@
                                                          namespace:@"http://example.com/ns"
                                                             prefix:@"bar"];
     PXElement *rootElement = document.root;
-    
+
     XCTAssert(rootElement.name, @"foo");
     XCTAssert(rootElement.namespace, @"http://example.com/ns");
 }
@@ -39,16 +39,16 @@
     PXDocument *documentA = [[PXDocument alloc] initWithElementName:@"foo"
                                                           namespace:@"http://example.com/ns"
                                                              prefix:@"bar"];
-    
+
     [documentA.root addElementWithName:@"a" namespace:nil content:nil];
     [documentA.root addElementWithName:@"b" namespace:nil content:nil];
     [documentA.root addElementWithName:@"c" namespace:nil content:nil];
-    
+
     PXElement *element = [documentA.root elementAtIndex:1];
     PXDocument *documentB = [[PXDocument alloc] initWithElement:element];
-    
+
     [element addElementWithName:@"1" namespace:nil content:nil];
-    
+
     XCTAssertEqual([element numberOfElements], 1);
     XCTAssertEqual([documentB.root numberOfChildren], 0);
 }
@@ -58,7 +58,7 @@
     NSBundle *bundle = [NSBundle bundleForClass:[self class]];
     PXDocument *document = [PXDocument documentNamed:@"simpleDocument.xml" inBundle:bundle];
     PXElement *rootElement = document.root;
-    
+
     XCTAssert(rootElement.name, @"stream");
     XCTAssert(rootElement.namespace, @"http://etherx.jabber.org/streams");
 }

@@ -20,14 +20,14 @@
     PXDocument *document = [[PXDocument alloc] initWithElementName:@"foo"
                                                          namespace:@"http://example.com/ns"
                                                             prefix:@"bar"];
-    
+
     PXElement *element = [document.root addElementWithName:@"el" namespace:nil content:@"Foo"];
-    
+
     XCTAssertEqual([element numberOfChildren], 1);
-    
+
     PXText *text = (PXText *)[element childAtIndex:0];
     XCTAssertEqualObjects([text stringValue], @"Foo");
-    
+
     text.stringValue = @"Bar";
     XCTAssertEqualObjects([text stringValue], @"Bar");
 }

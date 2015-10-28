@@ -29,7 +29,7 @@ typedef xmlNode *xmlNodePtr;
 - (NSArray *)nodesForXPath:(NSString *)xpath usingNamespaces:(NSDictionary *)namespaces;
 - (void)enumerateNodesForXPath:(NSString *)xpath
                usingNamespaces:(NSDictionary *)namespaces
-                         block:(void(^)(PXNode *element, BOOL *stop))block;
+                         block:(void (^)(PXNode *element, BOOL *stop))block;
 
 #pragma mark libxml Property
 @property (nonatomic, readonly) xmlNodePtr xmlNode;

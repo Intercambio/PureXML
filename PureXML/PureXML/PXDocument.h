@@ -21,7 +21,7 @@ typedef xmlDoc *xmlDocPtr;
 
 #pragma mark Life-cycle
 - (instancetype)init;
-- (instancetype)initWithElementName:(NSString *)name namespace:(NSString *)namespace prefix:(NSString *)prefix;
+- (instancetype)initWithElementName:(NSString *)name namespace:(NSString *) namespace prefix:(NSString *)prefix;
 - (instancetype)initWithElement:(PXElement *)element;
 - (instancetype)initWithXMLDoc:(xmlDocPtr)xmlDoc NS_DESIGNATED_INITIALIZER;
 

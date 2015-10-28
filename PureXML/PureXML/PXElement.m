@@ -24,7 +24,7 @@
     return [NSString stringWithUTF8String:(const char *)self.xmlNode->name];
 }
 
-- (NSString *)namespace
+- (NSString *) namespace
 {
     return [NSString stringWithUTF8String:(const char *)self.xmlNode->ns->href];
 }
@@ -36,8 +36,8 @@
     [self enumerateChildrenUsingBlock:^(PXNode *child, BOOL *stop) {
         [child removeFromParent];
     }];
-    
-    xmlNodePtr textNode = xmlNewText(BAD_CAST [stringValue UTF8String]);
+
+    xmlNodePtr textNode = xmlNewText(BAD_CAST[stringValue UTF8String]);
     xmlAddChild(self.xmlNode, textNode);
 }
 
@@ -48,22 +48,22 @@
     return [self valueForAttribute:name inNamespace:nil];
 }
 
-- (NSString *)valueForAttribute:(NSString *)name inNamespace:(NSString *)namespace
+- (NSString *)valueForAttribute:(NSString *)name inNamespace:(NSString *) namespace
 {
     xmlAttrPtr attr;
-    
+
     if ([namespace isEqualToString:self.namespace]) {
         namespace = nil;
     }
-    
+
     if (namespace) {
-        attr = xmlHasNsProp(self.xmlNode, BAD_CAST [name UTF8String], BAD_CAST [namespace UTF8String]);
+        attr = xmlHasNsProp(self.xmlNode, BAD_CAST[name UTF8String], BAD_CAST[namespace UTF8String]);
     } else {
-        attr = xmlHasProp(self.xmlNode, BAD_CAST [name UTF8String]);
+        attr = xmlHasProp(self.xmlNode, BAD_CAST[name UTF8String]);
     }
-    
+
     BOOL hasAttrNamespace = attr && attr->ns && attr->ns->href;
-    
+
     if (attr && xmlNodeGetContent(attr->children)) {
         if (namespace != nil == hasAttrNamespace) {
             return [NSString stringWithUTF8String:(const char *)xmlNodeGetContent(attr->children)];
@@ -74,18 +74,19 @@
 
 - (void)enumerateAttributesUsingBlock:(void (^)(NSString *name, id value, NSString *namespace, BOOL *stop))block
 {
-    if (block == nil) return;
-    
+    if (block == nil)
+        return;
+
     BOOL stop = NO;
     xmlAttrPtr attr = self.xmlNode->properties;
     while (attr && stop == NO) {
-        
+
         NSString *name = [NSString stringWithUTF8String:(const char *)attr->name];
         NSString *namespace = attr->ns ? [NSString stringWithUTF8String:(const char *)attr->ns->href] : nil;
         NSString *value = [NSString stringWithUTF8String:(const char *)xmlNodeGetContent(attr->children)];
-        
+
         block(name, value, namespace, &stop);
-        
+
         attr = attr->next;
     }
 }
@@ -95,29 +96,29 @@
     [self setValue:value forAttribute:name inNamespace:nil];
 }
 
-- (void)setValue:(id)value forAttribute:(NSString *)name inNamespace:(NSString *)namespace
+- (void)setValue:(id)value forAttribute:(NSString *)name inNamespace:(NSString *) namespace
 {
     NSParameterAssert([value isKindOfClass:[NSString class]]);
-    
+
     xmlNsPtr ns = NULL;
     if (namespace && ![namespace isEqualToString:self.namespace]) {
-        ns = xmlSearchNsByHref(self.document.xmlDoc, self.xmlNode, BAD_CAST [namespace UTF8String]);
+        ns = xmlSearchNsByHref(self.document.xmlDoc, self.xmlNode, BAD_CAST[namespace UTF8String]);
         if (ns == NULL) {
             NSString *prefix = nil;
             NSUInteger i = 1;
             xmlNsPtr freeNS = NULL;
             do {
                 prefix = [NSString stringWithFormat:@"x%lu", (unsigned long)i++];
-                freeNS = xmlSearchNs(self.document.xmlDoc, self.xmlNode, BAD_CAST [prefix UTF8String]);
+                freeNS = xmlSearchNs(self.document.xmlDoc, self.xmlNode, BAD_CAST[prefix UTF8String]);
             } while (freeNS);
-            ns = xmlNewNs(self.xmlNode, BAD_CAST [namespace UTF8String], BAD_CAST [prefix UTF8String]);
+            ns = xmlNewNs(self.xmlNode, BAD_CAST[namespace UTF8String], BAD_CAST[prefix UTF8String]);
         }
     }
-    
+
     if (ns) {
-        xmlSetNsProp(self.xmlNode, ns, BAD_CAST [name UTF8String], BAD_CAST [value UTF8String]);
+        xmlSetNsProp(self.xmlNode, ns, BAD_CAST[name UTF8String], BAD_CAST[value UTF8String]);
     } else {
-        xmlSetProp(self.xmlNode, BAD_CAST [name UTF8String], BAD_CAST [value UTF8String]);
+        xmlSetProp(self.xmlNode, BAD_CAST[name UTF8String], BAD_CAST[value UTF8String]);
     }
 }
 
@@ -126,13 +127,13 @@
 - (NSUInteger)numberOfChildren
 {
     NSUInteger idx = 0;
-    
+
     xmlNodePtr child = self.xmlNode->children;
     while (child) {
         child = child->next;
         idx++;
     }
-    
+
     return idx;
 }
 
@@ -144,7 +145,7 @@
         child = child->next;
         idx++;
     }
-    
+
     if (child) {
         return [self.document nodeWithXmlNode:child];
     } else {
@@ -152,10 +153,11 @@
     }
 }
 
-- (void)enumerateChildrenUsingBlock:(void (^)(PXNode * child, BOOL *stop))block
+- (void)enumerateChildrenUsingBlock:(void (^)(PXNode *child, BOOL *stop))block
 {
-    if (block == nil) return;
-    
+    if (block == nil)
+        return;
+
     BOOL stop = NO;
     xmlNodePtr child = self.xmlNode->children;
     while (child && stop == NO) {
@@ -170,7 +172,7 @@
 - (NSUInteger)numberOfElements
 {
     NSUInteger idx = 0;
-    
+
     xmlNodePtr child = self.xmlNode->children;
     while (child) {
         if (child && child->type == XML_ELEMENT_NODE) {
@@ -178,7 +180,7 @@
         }
         child = child->next;
     }
-    
+
     return idx;
 }
 
@@ -190,14 +192,15 @@
     while (child) {
         if (child && child->type == XML_ELEMENT_NODE) {
             element = child;
-            if (idx == index) break;
+            if (idx == index)
+                break;
             idx++;
         } else {
             element = NULL;
         }
         child = child->next;
     }
-    
+
     if (element && element->type == XML_ELEMENT_NODE) {
         return (PXElement *)[self.document nodeWithXmlNode:child];
     } else {
@@ -205,39 +208,40 @@
     }
 }
 
-- (void)enumerateElementsUsingBlock:(void(^)(PXElement *element, BOOL *stop))block
+- (void)enumerateElementsUsingBlock:(void (^)(PXElement *element, BOOL *stop))block
 {
-    if (block == nil) return;
-    
+    if (block == nil)
+        return;
+
     BOOL stop = NO;
     xmlNodePtr child = self.xmlNode->children;
     while (child && stop == NO) {
         if (child && child->type == XML_ELEMENT_NODE) {
             PXElement *node = (PXElement *)[self.document nodeWithXmlNode:child];
-            block(node,  &stop);
+            block(node, &stop);
         }
         child = child->next;
     }
 }
 
-- (PXElement *)addElementWithName:(NSString *)name namespace:(NSString *)namespace content:(NSString *)content
+- (PXElement *)addElementWithName:(NSString *)name namespace:(NSString *) namespace content:(NSString *)content
 {
     xmlNsPtr ns = NULL;
     if (namespace && ![namespace isEqualToString:self.namespace]) {
-        ns = xmlSearchNsByHref(self.document.xmlDoc, self.xmlNode, BAD_CAST [namespace UTF8String]);
+        ns = xmlSearchNsByHref(self.document.xmlDoc, self.xmlNode, BAD_CAST[namespace UTF8String]);
         if (ns == NULL) {
             NSString *prefix = nil;
             NSUInteger i = 1;
             xmlNsPtr freeNS = NULL;
             do {
                 prefix = [NSString stringWithFormat:@"x%lu", (unsigned long)i++];
-                freeNS = xmlSearchNs(self.document.xmlDoc, self.xmlNode, BAD_CAST [prefix UTF8String]);
+                freeNS = xmlSearchNs(self.document.xmlDoc, self.xmlNode, BAD_CAST[prefix UTF8String]);
             } while (freeNS);
-            ns = xmlNewNs(self.xmlNode, BAD_CAST [namespace UTF8String], BAD_CAST [prefix UTF8String]);
+            ns = xmlNewNs(self.xmlNode, BAD_CAST[namespace UTF8String], BAD_CAST[prefix UTF8String]);
         }
     }
-    
-    xmlNodePtr element = xmlNewChild(self.xmlNode, ns, BAD_CAST [name UTF8String], BAD_CAST [content UTF8String]);
+
+    xmlNodePtr element = xmlNewChild(self.xmlNode, ns, BAD_CAST[name UTF8String], BAD_CAST[content UTF8String]);
     return (PXElement *)[self.document nodeWithXmlNode:element];
 }
 

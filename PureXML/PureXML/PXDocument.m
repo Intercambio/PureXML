@@ -22,7 +22,6 @@
 
 @implementation PXDocument
 
-
 + (instancetype)documentNamed:(NSString *)name
 {
     return [self documentNamed:name inBundle:[NSBundle mainBundle]];
@@ -48,14 +47,14 @@
     return [self initWithXMLDoc:xmlNewDoc(BAD_CAST "1.0")];
 }
 
-- (id)initWithElementName:(NSString *)name namespace:(NSString *)namespace prefix:(NSString *)prefix
+- (id)initWithElementName:(NSString *)name namespace:(NSString *) namespace prefix:(NSString *)prefix
 {
     self = [self initWithXMLDoc:xmlNewDoc(BAD_CAST "1.0")];
     if (self) {
-        xmlNodePtr node = xmlNewNode(NULL, BAD_CAST [name UTF8String]);
+        xmlNodePtr node = xmlNewNode(NULL, BAD_CAST[name UTF8String]);
         xmlDocSetRootElement(_xmlDoc, node);
         if (namespace) {
-            xmlNsPtr ns = xmlNewNs(node, BAD_CAST [namespace UTF8String], BAD_CAST [prefix UTF8String]);
+            xmlNsPtr ns = xmlNewNs(node, BAD_CAST[namespace UTF8String], BAD_CAST[prefix UTF8String]);
             xmlSetNs(node, ns);
         }
     }
@@ -124,28 +123,28 @@
 - (PXNode *)nodeWithXmlNode:(xmlNodePtr)xmlNode
 {
     NSParameterAssert(xmlNode);
-    
+
     NSValue *pointer = [NSValue valueWithPointer:xmlNode];
-    
+
     PXNode *node = [self.documentNodes objectForKey:pointer];
-    
+
     if (node == nil) {
         switch (xmlNode->type) {
-            case XML_ELEMENT_NODE:
-                node = [[PXElement alloc] initWithDocument:self xmlNode:xmlNode];
-                break;
-                
-            case XML_TEXT_NODE:
-                node = [[PXText alloc] initWithDocument:self xmlNode:xmlNode];
-                break;
-                
-            default:
-                node = [[PXNode alloc] initWithDocument:self xmlNode:xmlNode];
-                break;
+        case XML_ELEMENT_NODE:
+            node = [[PXElement alloc] initWithDocument:self xmlNode:xmlNode];
+            break;
+
+        case XML_TEXT_NODE:
+            node = [[PXText alloc] initWithDocument:self xmlNode:xmlNode];
+            break;
+
+        default:
+            node = [[PXNode alloc] initWithDocument:self xmlNode:xmlNode];
+            break;
         }
         [self.documentNodes setObject:node forKey:pointer];
     }
-    
+
     return node;
 }
 

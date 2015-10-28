@@ -21,7 +21,7 @@
     NSBundle *bundle = [NSBundle bundleForClass:[self class]];
     PXDocument *document = [PXDocument documentNamed:@"text.xml" inBundle:bundle];
     PXElement *rootElement = document.root;
-    
+
     XCTAssertEqual([rootElement numberOfChildren], 1);
     if ([rootElement numberOfChildren] == 1) {
         PXNode *node = [rootElement childAtIndex:0];

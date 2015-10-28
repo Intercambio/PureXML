@@ -16,7 +16,7 @@
 
 - (void)setStringValue:(NSString *)stringValue
 {
-    xmlNodeSetContent(self.xmlNode, BAD_CAST [stringValue UTF8String]);
+    xmlNodeSetContent(self.xmlNode, BAD_CAST[stringValue UTF8String]);
 }
 
 @end
