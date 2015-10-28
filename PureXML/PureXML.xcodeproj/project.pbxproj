@@ -7,50 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F612A3B01BA346850014DEEE /* PXDocumentValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = F612A3AE1BA346850014DEEE /* PXDocumentValueTransformer.h */; settings = {ASSET_TAGS = (); }; };
-		F612A3B11BA346850014DEEE /* PXDocumentValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = F612A3AE1BA346850014DEEE /* PXDocumentValueTransformer.h */; settings = {ASSET_TAGS = (); }; };
-		F612A3B21BA346850014DEEE /* PXDocumentValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = F612A3AF1BA346850014DEEE /* PXDocumentValueTransformer.m */; settings = {ASSET_TAGS = (); }; };
-		F612A3B31BA346850014DEEE /* PXDocumentValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = F612A3AF1BA346850014DEEE /* PXDocumentValueTransformer.m */; settings = {ASSET_TAGS = (); }; };
+		F612A3B01BA346850014DEEE /* PXDocumentValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = F612A3AE1BA346850014DEEE /* PXDocumentValueTransformer.h */; };
+		F612A3B11BA346850014DEEE /* PXDocumentValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = F612A3AE1BA346850014DEEE /* PXDocumentValueTransformer.h */; };
+		F612A3B21BA346850014DEEE /* PXDocumentValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = F612A3AF1BA346850014DEEE /* PXDocumentValueTransformer.m */; };
+		F612A3B31BA346850014DEEE /* PXDocumentValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = F612A3AF1BA346850014DEEE /* PXDocumentValueTransformer.m */; };
 		F6D831511BA32E2D008C9594 /* PureXML.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D831501BA32E2D008C9594 /* PureXML.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F6D831581BA32E2D008C9594 /* PureXMLiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8314D1BA32E2D008C9594 /* PureXMLiOS.framework */; settings = {ASSET_TAGS = (); }; };
-		F6D831741BA32EAB008C9594 /* PureXMLOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8316A1BA32EAB008C9594 /* PureXMLOSX.framework */; settings = {ASSET_TAGS = (); }; };
+		F6D831581BA32E2D008C9594 /* PureXMLiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8314D1BA32E2D008C9594 /* PureXMLiOS.framework */; };
+		F6D831741BA32EAB008C9594 /* PureXMLOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8316A1BA32EAB008C9594 /* PureXMLOSX.framework */; };
 		F6D831811BA339A4008C9594 /* PureXML.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D831501BA32E2D008C9594 /* PureXML.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6D831861BA33B0B008C9594 /* PXDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D831841BA33B0B008C9594 /* PXDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6D831871BA33B0B008C9594 /* PXDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D831841BA33B0B008C9594 /* PXDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F6D831881BA33B0B008C9594 /* PXDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831851BA33B0B008C9594 /* PXDocument.m */; settings = {ASSET_TAGS = (); }; };
-		F6D831891BA33B0B008C9594 /* PXDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831851BA33B0B008C9594 /* PXDocument.m */; settings = {ASSET_TAGS = (); }; };
+		F6D831881BA33B0B008C9594 /* PXDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831851BA33B0B008C9594 /* PXDocument.m */; };
+		F6D831891BA33B0B008C9594 /* PXDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831851BA33B0B008C9594 /* PXDocument.m */; };
 		F6D8318D1BA33BAB008C9594 /* PXNode.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D8318B1BA33BAB008C9594 /* PXNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6D8318E1BA33BAB008C9594 /* PXNode.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D8318B1BA33BAB008C9594 /* PXNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F6D8318F1BA33BAB008C9594 /* PXNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8318C1BA33BAB008C9594 /* PXNode.m */; settings = {ASSET_TAGS = (); }; };
-		F6D831901BA33BAB008C9594 /* PXNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8318C1BA33BAB008C9594 /* PXNode.m */; settings = {ASSET_TAGS = (); }; };
+		F6D8318F1BA33BAB008C9594 /* PXNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8318C1BA33BAB008C9594 /* PXNode.m */; };
+		F6D831901BA33BAB008C9594 /* PXNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8318C1BA33BAB008C9594 /* PXNode.m */; };
 		F6D831931BA33C17008C9594 /* PXElement.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D831911BA33C17008C9594 /* PXElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6D831941BA33C17008C9594 /* PXElement.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D831911BA33C17008C9594 /* PXElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F6D831951BA33C17008C9594 /* PXElement.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831921BA33C17008C9594 /* PXElement.m */; settings = {ASSET_TAGS = (); }; };
-		F6D831961BA33C17008C9594 /* PXElement.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831921BA33C17008C9594 /* PXElement.m */; settings = {ASSET_TAGS = (); }; };
-		F6D831991BA33CC1008C9594 /* PXDocument+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D831971BA33CC1008C9594 /* PXDocument+Private.h */; settings = {ASSET_TAGS = (); }; };
-		F6D8319A1BA33CC1008C9594 /* PXDocument+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D831971BA33CC1008C9594 /* PXDocument+Private.h */; settings = {ASSET_TAGS = (); }; };
-		F6D831A01BA33DA2008C9594 /* PXNode+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D8319D1BA33DA2008C9594 /* PXNode+Private.h */; settings = {ASSET_TAGS = (); }; };
-		F6D831A11BA33DA2008C9594 /* PXNode+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D8319D1BA33DA2008C9594 /* PXNode+Private.h */; settings = {ASSET_TAGS = (); }; };
+		F6D831951BA33C17008C9594 /* PXElement.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831921BA33C17008C9594 /* PXElement.m */; };
+		F6D831961BA33C17008C9594 /* PXElement.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831921BA33C17008C9594 /* PXElement.m */; };
+		F6D831991BA33CC1008C9594 /* PXDocument+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D831971BA33CC1008C9594 /* PXDocument+Private.h */; };
+		F6D8319A1BA33CC1008C9594 /* PXDocument+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D831971BA33CC1008C9594 /* PXDocument+Private.h */; };
+		F6D831A01BA33DA2008C9594 /* PXNode+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D8319D1BA33DA2008C9594 /* PXNode+Private.h */; };
+		F6D831A11BA33DA2008C9594 /* PXNode+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D8319D1BA33DA2008C9594 /* PXNode+Private.h */; };
 		F6D831A21BA33DA2008C9594 /* PXText.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D8319E1BA33DA2008C9594 /* PXText.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6D831A31BA33DA2008C9594 /* PXText.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D8319E1BA33DA2008C9594 /* PXText.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F6D831A41BA33DA2008C9594 /* PXText.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8319F1BA33DA2008C9594 /* PXText.m */; settings = {ASSET_TAGS = (); }; };
-		F6D831A51BA33DA2008C9594 /* PXText.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8319F1BA33DA2008C9594 /* PXText.m */; settings = {ASSET_TAGS = (); }; };
+		F6D831A41BA33DA2008C9594 /* PXText.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8319F1BA33DA2008C9594 /* PXText.m */; };
+		F6D831A51BA33DA2008C9594 /* PXText.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8319F1BA33DA2008C9594 /* PXText.m */; };
 		F6D831AC1BA33E30008C9594 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D831AB1BA33E30008C9594 /* libxml2.tbd */; };
 		F6D831AE1BA33E39008C9594 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D831AD1BA33E39008C9594 /* libxml2.tbd */; };
 		F6D831AF1BA33E57008C9594 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D831AD1BA33E39008C9594 /* libxml2.tbd */; };
 		F6D831B01BA33E5D008C9594 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D831AB1BA33E30008C9594 /* libxml2.tbd */; };
-		F6D831B51BA33EA3008C9594 /* PXDocumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B11BA33EA3008C9594 /* PXDocumentTests.m */; settings = {ASSET_TAGS = (); }; };
-		F6D831B61BA33EA3008C9594 /* PXDocumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B11BA33EA3008C9594 /* PXDocumentTests.m */; settings = {ASSET_TAGS = (); }; };
-		F6D831B71BA33EA3008C9594 /* PXElementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B21BA33EA3008C9594 /* PXElementTests.m */; settings = {ASSET_TAGS = (); }; };
-		F6D831B81BA33EA3008C9594 /* PXElementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B21BA33EA3008C9594 /* PXElementTests.m */; settings = {ASSET_TAGS = (); }; };
-		F6D831B91BA33EA3008C9594 /* PXNodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B31BA33EA3008C9594 /* PXNodeTests.m */; settings = {ASSET_TAGS = (); }; };
-		F6D831BA1BA33EA3008C9594 /* PXNodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B31BA33EA3008C9594 /* PXNodeTests.m */; settings = {ASSET_TAGS = (); }; };
-		F6D831BB1BA33EA3008C9594 /* PXTextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B41BA33EA3008C9594 /* PXTextTests.m */; settings = {ASSET_TAGS = (); }; };
-		F6D831BC1BA33EA3008C9594 /* PXTextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B41BA33EA3008C9594 /* PXTextTests.m */; settings = {ASSET_TAGS = (); }; };
-		F6D831BF1BA33F9A008C9594 /* simpleDocument.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6D831BE1BA33F9A008C9594 /* simpleDocument.xml */; settings = {ASSET_TAGS = (); }; };
-		F6D831C01BA33F9A008C9594 /* simpleDocument.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6D831BE1BA33F9A008C9594 /* simpleDocument.xml */; settings = {ASSET_TAGS = (); }; };
-		F6D831C21BA33FAC008C9594 /* text.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6D831C11BA33FAC008C9594 /* text.xml */; settings = {ASSET_TAGS = (); }; };
-		F6D831C31BA33FAC008C9594 /* text.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6D831C11BA33FAC008C9594 /* text.xml */; settings = {ASSET_TAGS = (); }; };
+		F6D831B51BA33EA3008C9594 /* PXDocumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B11BA33EA3008C9594 /* PXDocumentTests.m */; };
+		F6D831B61BA33EA3008C9594 /* PXDocumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B11BA33EA3008C9594 /* PXDocumentTests.m */; };
+		F6D831B71BA33EA3008C9594 /* PXElementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B21BA33EA3008C9594 /* PXElementTests.m */; };
+		F6D831B81BA33EA3008C9594 /* PXElementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B21BA33EA3008C9594 /* PXElementTests.m */; };
+		F6D831B91BA33EA3008C9594 /* PXNodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B31BA33EA3008C9594 /* PXNodeTests.m */; };
+		F6D831BA1BA33EA3008C9594 /* PXNodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B31BA33EA3008C9594 /* PXNodeTests.m */; };
+		F6D831BB1BA33EA3008C9594 /* PXTextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B41BA33EA3008C9594 /* PXTextTests.m */; };
+		F6D831BC1BA33EA3008C9594 /* PXTextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B41BA33EA3008C9594 /* PXTextTests.m */; };
+		F6D831BF1BA33F9A008C9594 /* simpleDocument.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6D831BE1BA33F9A008C9594 /* simpleDocument.xml */; };
+		F6D831C01BA33F9A008C9594 /* simpleDocument.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6D831BE1BA33F9A008C9594 /* simpleDocument.xml */; };
+		F6D831C21BA33FAC008C9594 /* text.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6D831C11BA33FAC008C9594 /* text.xml */; };
+		F6D831C31BA33FAC008C9594 /* text.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6D831C11BA33FAC008C9594 /* text.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -382,7 +382,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = PX;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Tobias Kräntzer";
 				TargetAttributes = {
 					F6D8314C1BA32E2D008C9594 = {
@@ -520,9 +520,11 @@
 		F6D831461BA32E12008C9594 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
@@ -552,11 +554,12 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -609,11 +612,12 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -752,7 +756,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -809,7 +813,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
