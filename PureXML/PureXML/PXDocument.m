@@ -47,15 +47,15 @@
     return [self initWithXMLDoc:xmlNewDoc(BAD_CAST "1.0")];
 }
 
-- (id)initWithElementName:(NSString *)name namespace:(NSString *) namespace prefix:(NSString *)prefix
+- (id)initWithElementName:(NSString *)name namespace:(NSString *)ns prefix:(NSString *)prefix
 {
     self = [self initWithXMLDoc:xmlNewDoc(BAD_CAST "1.0")];
     if (self) {
         xmlNodePtr node = xmlNewNode(NULL, BAD_CAST[name UTF8String]);
         xmlDocSetRootElement(_xmlDoc, node);
-        if (namespace) {
-            xmlNsPtr ns = xmlNewNs(node, BAD_CAST[namespace UTF8String], BAD_CAST[prefix UTF8String]);
-            xmlSetNs(node, ns);
+        if (ns) {
+            xmlNsPtr nsPtr = xmlNewNs(node, BAD_CAST[ns UTF8String], BAD_CAST[prefix UTF8String]);
+            xmlSetNs(node, nsPtr);
         }
     }
     return self;
