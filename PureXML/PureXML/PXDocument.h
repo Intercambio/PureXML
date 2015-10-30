@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Tobias Kräntzer. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 typedef struct _xmlDoc xmlDoc;
 typedef xmlDoc *xmlDocPtr;

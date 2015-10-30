@@ -7,8 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-
-#import "PureXML.h"
+#import <PureXML/PureXML.h>
 
 @interface PXNodeTests : XCTestCase
 

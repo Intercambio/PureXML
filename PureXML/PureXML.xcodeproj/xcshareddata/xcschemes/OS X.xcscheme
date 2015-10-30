@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F6D831691BA32EAB008C9594"
-               BuildableName = "PureXMLOSX.framework"
+               BuildableName = "PureXML.framework"
                BlueprintName = "PureXMLOSX"
                ReferencedContainer = "container:PureXML.xcodeproj">
             </BuildableReference>
@@ -44,7 +44,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F6D831691BA32EAB008C9594"
-            BuildableName = "PureXMLOSX.framework"
+            BuildableName = "PureXML.framework"
             BlueprintName = "PureXMLOSX"
             ReferencedContainer = "container:PureXML.xcodeproj">
          </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F6D831691BA32EAB008C9594"
-            BuildableName = "PureXMLOSX.framework"
+            BuildableName = "PureXML.framework"
             BlueprintName = "PureXMLOSX"
             ReferencedContainer = "container:PureXML.xcodeproj">
          </BuildableReference>
@@ -84,7 +84,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F6D831691BA32EAB008C9594"
-            BuildableName = "PureXMLOSX.framework"
+            BuildableName = "PureXML.framework"
             BlueprintName = "PureXMLOSX"
             ReferencedContainer = "container:PureXML.xcodeproj">
          </BuildableReference>
