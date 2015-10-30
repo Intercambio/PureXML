@@ -61,6 +61,16 @@
 		F6DC119E1BE3CEB400403E4B /* PXInputStreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DC119C1BE3CEB400403E4B /* PXInputStreamTests.m */; };
 		F6DC11A01BE3D06000403E4B /* simpleStream.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6DC119F1BE3D06000403E4B /* simpleStream.xml */; };
 		F6DC11A11BE3D06000403E4B /* simpleStream.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6DC119F1BE3D06000403E4B /* simpleStream.xml */; };
+		F6DC11A41BE3D29A00403E4B /* PXOutputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = F6DC11A21BE3D29A00403E4B /* PXOutputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6DC11A51BE3D29A00403E4B /* PXOutputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = F6DC11A21BE3D29A00403E4B /* PXOutputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6DC11A61BE3D29A00403E4B /* PXOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DC11A31BE3D29A00403E4B /* PXOutputStream.m */; };
+		F6DC11A71BE3D29A00403E4B /* PXOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DC11A31BE3D29A00403E4B /* PXOutputStream.m */; };
+		F6DC11A91BE3D74400403E4B /* PXOutputStreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DC11A81BE3D74400403E4B /* PXOutputStreamTests.m */; };
+		F6DC11AA1BE3D74400403E4B /* PXOutputStreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DC11A81BE3D74400403E4B /* PXOutputStreamTests.m */; };
+		F6DC11AD1BE3D76F00403E4B /* streamHeader.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6DC11AB1BE3D76F00403E4B /* streamHeader.xml */; };
+		F6DC11AE1BE3D76F00403E4B /* streamHeader.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6DC11AB1BE3D76F00403E4B /* streamHeader.xml */; };
+		F6DC11AF1BE3D76F00403E4B /* element.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6DC11AC1BE3D76F00403E4B /* element.xml */; };
+		F6DC11B01BE3D76F00403E4B /* element.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6DC11AC1BE3D76F00403E4B /* element.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +128,11 @@
 		F6DC11961BE3CD5C00403E4B /* PXInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXInputStream.m; path = PureXML/PXInputStream.m; sourceTree = "<group>"; };
 		F6DC119C1BE3CEB400403E4B /* PXInputStreamTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXInputStreamTests.m; sourceTree = "<group>"; };
 		F6DC119F1BE3D06000403E4B /* simpleStream.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = simpleStream.xml; sourceTree = "<group>"; };
+		F6DC11A21BE3D29A00403E4B /* PXOutputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXOutputStream.h; sourceTree = "<group>"; };
+		F6DC11A31BE3D29A00403E4B /* PXOutputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXOutputStream.m; sourceTree = "<group>"; };
+		F6DC11A81BE3D74400403E4B /* PXOutputStreamTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXOutputStreamTests.m; sourceTree = "<group>"; };
+		F6DC11AB1BE3D76F00403E4B /* streamHeader.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = streamHeader.xml; sourceTree = "<group>"; };
+		F6DC11AC1BE3D76F00403E4B /* element.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = element.xml; sourceTree = "<group>"; };
 		FD7C25B80E99CDC845310BB1 /* Pods-PureXMLOSXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PureXMLOSXTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-PureXMLOSXTests/Pods-PureXMLOSXTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -304,6 +319,8 @@
 				F6D831BE1BA33F9A008C9594 /* simpleDocument.xml */,
 				F6D831C11BA33FAC008C9594 /* text.xml */,
 				F6DC119F1BE3D06000403E4B /* simpleStream.xml */,
+				F6DC11AB1BE3D76F00403E4B /* streamHeader.xml */,
+				F6DC11AC1BE3D76F00403E4B /* element.xml */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -313,6 +330,8 @@
 			children = (
 				F6DC11951BE3CD5C00403E4B /* PXInputStream.h */,
 				F6DC11961BE3CD5C00403E4B /* PXInputStream.m */,
+				F6DC11A21BE3D29A00403E4B /* PXOutputStream.h */,
+				F6DC11A31BE3D29A00403E4B /* PXOutputStream.m */,
 			);
 			name = Stream;
 			path = ..;
@@ -322,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				F6DC119C1BE3CEB400403E4B /* PXInputStreamTests.m */,
+				F6DC11A81BE3D74400403E4B /* PXOutputStreamTests.m */,
 			);
 			name = Stream;
 			sourceTree = "<group>";
@@ -342,6 +362,7 @@
 				F6D831861BA33B0B008C9594 /* PXDocument.h in Headers */,
 				F6DC11971BE3CD5C00403E4B /* PXInputStream.h in Headers */,
 				F6D831931BA33C17008C9594 /* PXElement.h in Headers */,
+				F6DC11A41BE3D29A00403E4B /* PXOutputStream.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +379,7 @@
 				F6D831871BA33B0B008C9594 /* PXDocument.h in Headers */,
 				F6DC11981BE3CD5C00403E4B /* PXInputStream.h in Headers */,
 				F6D831941BA33C17008C9594 /* PXElement.h in Headers */,
+				F6DC11A51BE3D29A00403E4B /* PXOutputStream.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,8 +520,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6DC11AD1BE3D76F00403E4B /* streamHeader.xml in Resources */,
 				F6DC11A01BE3D06000403E4B /* simpleStream.xml in Resources */,
 				F6D831C21BA33FAC008C9594 /* text.xml in Resources */,
+				F6DC11AF1BE3D76F00403E4B /* element.xml in Resources */,
 				F6D831BF1BA33F9A008C9594 /* simpleDocument.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,8 +539,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6DC11AE1BE3D76F00403E4B /* streamHeader.xml in Resources */,
 				F6DC11A11BE3D06000403E4B /* simpleStream.xml in Resources */,
 				F6D831C31BA33FAC008C9594 /* text.xml in Resources */,
+				F6DC11B01BE3D76F00403E4B /* element.xml in Resources */,
 				F6D831C01BA33F9A008C9594 /* simpleDocument.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -626,6 +652,7 @@
 				F6D8318F1BA33BAB008C9594 /* PXNode.m in Sources */,
 				F6D831951BA33C17008C9594 /* PXElement.m in Sources */,
 				F6DC11991BE3CD5C00403E4B /* PXInputStream.m in Sources */,
+				F6DC11A61BE3D29A00403E4B /* PXOutputStream.m in Sources */,
 				F612A3B21BA346850014DEEE /* PXDocumentValueTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -636,6 +663,7 @@
 			files = (
 				F6D831BB1BA33EA3008C9594 /* PXTextTests.m in Sources */,
 				F6DC119D1BE3CEB400403E4B /* PXInputStreamTests.m in Sources */,
+				F6DC11A91BE3D74400403E4B /* PXOutputStreamTests.m in Sources */,
 				F6D831B91BA33EA3008C9594 /* PXNodeTests.m in Sources */,
 				F681481A1BE3C32D00B4DF56 /* PXDocumentTests.m in Sources */,
 				F6D831B71BA33EA3008C9594 /* PXElementTests.m in Sources */,
@@ -651,6 +679,7 @@
 				F6D831901BA33BAB008C9594 /* PXNode.m in Sources */,
 				F6D831961BA33C17008C9594 /* PXElement.m in Sources */,
 				F6DC119A1BE3CD5C00403E4B /* PXInputStream.m in Sources */,
+				F6DC11A71BE3D29A00403E4B /* PXOutputStream.m in Sources */,
 				F612A3B31BA346850014DEEE /* PXDocumentValueTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -661,6 +690,7 @@
 			files = (
 				F6D831BC1BA33EA3008C9594 /* PXTextTests.m in Sources */,
 				F6DC119E1BE3CEB400403E4B /* PXInputStreamTests.m in Sources */,
+				F6DC11AA1BE3D74400403E4B /* PXOutputStreamTests.m in Sources */,
 				F6D831BA1BA33EA3008C9594 /* PXNodeTests.m in Sources */,
 				F681481B1BE3C33600B4DF56 /* PXDocumentTests.m in Sources */,
 				F6D831B81BA33EA3008C9594 /* PXElementTests.m in Sources */,
