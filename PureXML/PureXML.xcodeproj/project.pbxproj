@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89A26507DA3861680AB4979B /* libPods-PureXMLiOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8016FC73B5C312470DC8CF /* libPods-PureXMLiOSTests.a */; };
+		E07D20434B807A98464480A1 /* libPods-PureXMLOSXTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A77626DD93F0C52AFA8875D4 /* libPods-PureXMLOSXTests.a */; };
 		F612A3B01BA346850014DEEE /* PXDocumentValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = F612A3AE1BA346850014DEEE /* PXDocumentValueTransformer.h */; };
 		F612A3B11BA346850014DEEE /* PXDocumentValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = F612A3AE1BA346850014DEEE /* PXDocumentValueTransformer.h */; };
 		F612A3B21BA346850014DEEE /* PXDocumentValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = F612A3AF1BA346850014DEEE /* PXDocumentValueTransformer.m */; };
@@ -51,6 +53,14 @@
 		F6D831C01BA33F9A008C9594 /* simpleDocument.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6D831BE1BA33F9A008C9594 /* simpleDocument.xml */; };
 		F6D831C21BA33FAC008C9594 /* text.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6D831C11BA33FAC008C9594 /* text.xml */; };
 		F6D831C31BA33FAC008C9594 /* text.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6D831C11BA33FAC008C9594 /* text.xml */; };
+		F6DC11971BE3CD5C00403E4B /* PXInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = F6DC11951BE3CD5C00403E4B /* PXInputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6DC11981BE3CD5C00403E4B /* PXInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = F6DC11951BE3CD5C00403E4B /* PXInputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6DC11991BE3CD5C00403E4B /* PXInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DC11961BE3CD5C00403E4B /* PXInputStream.m */; };
+		F6DC119A1BE3CD5C00403E4B /* PXInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DC11961BE3CD5C00403E4B /* PXInputStream.m */; };
+		F6DC119D1BE3CEB400403E4B /* PXInputStreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DC119C1BE3CEB400403E4B /* PXInputStreamTests.m */; };
+		F6DC119E1BE3CEB400403E4B /* PXInputStreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DC119C1BE3CEB400403E4B /* PXInputStreamTests.m */; };
+		F6DC11A01BE3D06000403E4B /* simpleStream.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6DC119F1BE3D06000403E4B /* simpleStream.xml */; };
+		F6DC11A11BE3D06000403E4B /* simpleStream.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6DC119F1BE3D06000403E4B /* simpleStream.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +81,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1EB97442B4E287231EBE8FE6 /* Pods-PureXMLOSXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PureXMLOSXTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-PureXMLOSXTests/Pods-PureXMLOSXTests.release.xcconfig"; sourceTree = "<group>"; };
+		56B63A56FA09A0386B454332 /* Pods-PureXMLiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PureXMLiOSTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-PureXMLiOSTests/Pods-PureXMLiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5F8016FC73B5C312470DC8CF /* libPods-PureXMLiOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PureXMLiOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		744B1438778719B43E86645B /* Pods-PureXMLiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PureXMLiOSTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-PureXMLiOSTests/Pods-PureXMLiOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		A77626DD93F0C52AFA8875D4 /* libPods-PureXMLOSXTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PureXMLOSXTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F612A3AE1BA346850014DEEE /* PXDocumentValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXDocumentValueTransformer.h; sourceTree = "<group>"; };
 		F612A3AF1BA346850014DEEE /* PXDocumentValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXDocumentValueTransformer.m; sourceTree = "<group>"; };
 		F68148191BE150DD00B4DF56 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
@@ -99,6 +114,11 @@
 		F6D831B41BA33EA3008C9594 /* PXTextTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXTextTests.m; sourceTree = "<group>"; };
 		F6D831BE1BA33F9A008C9594 /* simpleDocument.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = simpleDocument.xml; sourceTree = "<group>"; };
 		F6D831C11BA33FAC008C9594 /* text.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = text.xml; sourceTree = "<group>"; };
+		F6DC11951BE3CD5C00403E4B /* PXInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PXInputStream.h; path = PureXML/PXInputStream.h; sourceTree = "<group>"; };
+		F6DC11961BE3CD5C00403E4B /* PXInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXInputStream.m; path = PureXML/PXInputStream.m; sourceTree = "<group>"; };
+		F6DC119C1BE3CEB400403E4B /* PXInputStreamTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXInputStreamTests.m; sourceTree = "<group>"; };
+		F6DC119F1BE3D06000403E4B /* simpleStream.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = simpleStream.xml; sourceTree = "<group>"; };
+		FD7C25B80E99CDC845310BB1 /* Pods-PureXMLOSXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PureXMLOSXTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-PureXMLOSXTests/Pods-PureXMLOSXTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +136,7 @@
 			files = (
 				F6D831AE1BA33E39008C9594 /* libxml2.tbd in Frameworks */,
 				F6D831581BA32E2D008C9594 /* PureXML.framework in Frameworks */,
+				89A26507DA3861680AB4979B /* libPods-PureXMLiOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,12 +154,24 @@
 			files = (
 				F6D831AC1BA33E30008C9594 /* libxml2.tbd in Frameworks */,
 				F6D831741BA32EAB008C9594 /* PureXML.framework in Frameworks */,
+				E07D20434B807A98464480A1 /* libPods-PureXMLOSXTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD8F36D02B90DEB9C1569B11 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD7C25B80E99CDC845310BB1 /* Pods-PureXMLOSXTests.debug.xcconfig */,
+				1EB97442B4E287231EBE8FE6 /* Pods-PureXMLOSXTests.release.xcconfig */,
+				56B63A56FA09A0386B454332 /* Pods-PureXMLiOSTests.debug.xcconfig */,
+				744B1438778719B43E86645B /* Pods-PureXMLiOSTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F612A3B41BA3468D0014DEEE /* Value Transformer */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +224,7 @@
 				F6D8315B1BA32E2D008C9594 /* PureXMLTests */,
 				F6D831AA1BA33E21008C9594 /* Frameworks */,
 				F6D8314E1BA32E2D008C9594 /* Products */,
+				AD8F36D02B90DEB9C1569B11 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -210,6 +244,7 @@
 			children = (
 				F6D831501BA32E2D008C9594 /* PureXML.h */,
 				F6D831831BA33ADD008C9594 /* Document */,
+				F6DC11941BE3CD3300403E4B /* Stream */,
 				F612A3B41BA3468D0014DEEE /* Value Transformer */,
 				F612A3B51BA346CE0014DEEE /* Supporting Files */,
 			);
@@ -220,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				F612A3B71BA346F40014DEEE /* Document */,
+				F6DC119B1BE3CE9B00403E4B /* Stream */,
 				F6D831BD1BA33F8B008C9594 /* Data */,
 				F612A3B61BA346EB0014DEEE /* Supporting Files */,
 			);
@@ -256,6 +292,8 @@
 			children = (
 				F6D831AD1BA33E39008C9594 /* libxml2.tbd */,
 				F6D831AB1BA33E30008C9594 /* libxml2.tbd */,
+				A77626DD93F0C52AFA8875D4 /* libPods-PureXMLOSXTests.a */,
+				5F8016FC73B5C312470DC8CF /* libPods-PureXMLiOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -265,8 +303,27 @@
 			children = (
 				F6D831BE1BA33F9A008C9594 /* simpleDocument.xml */,
 				F6D831C11BA33FAC008C9594 /* text.xml */,
+				F6DC119F1BE3D06000403E4B /* simpleStream.xml */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		F6DC11941BE3CD3300403E4B /* Stream */ = {
+			isa = PBXGroup;
+			children = (
+				F6DC11951BE3CD5C00403E4B /* PXInputStream.h */,
+				F6DC11961BE3CD5C00403E4B /* PXInputStream.m */,
+			);
+			name = Stream;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		F6DC119B1BE3CE9B00403E4B /* Stream */ = {
+			isa = PBXGroup;
+			children = (
+				F6DC119C1BE3CEB400403E4B /* PXInputStreamTests.m */,
+			);
+			name = Stream;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +340,7 @@
 				F6D8318D1BA33BAB008C9594 /* PXNode.h in Headers */,
 				F6D831511BA32E2D008C9594 /* PureXML.h in Headers */,
 				F6D831861BA33B0B008C9594 /* PXDocument.h in Headers */,
+				F6DC11971BE3CD5C00403E4B /* PXInputStream.h in Headers */,
 				F6D831931BA33C17008C9594 /* PXElement.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +356,7 @@
 				F6D8318E1BA33BAB008C9594 /* PXNode.h in Headers */,
 				F6D831811BA339A4008C9594 /* PureXML.h in Headers */,
 				F6D831871BA33B0B008C9594 /* PXDocument.h in Headers */,
+				F6DC11981BE3CD5C00403E4B /* PXInputStream.h in Headers */,
 				F6D831941BA33C17008C9594 /* PXElement.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,9 +386,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6D831621BA32E2D008C9594 /* Build configuration list for PBXNativeTarget "PureXMLiOSTests" */;
 			buildPhases = (
+				9939F3C388A69587255C605D /* Check Pods Manifest.lock */,
 				F6D831531BA32E2D008C9594 /* Sources */,
 				F6D831541BA32E2D008C9594 /* Frameworks */,
 				F6D831551BA32E2D008C9594 /* Resources */,
+				EA572A55D04A2927EDC17C60 /* Embed Pods Frameworks */,
+				C3519155D7F4959EA826E817 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -363,9 +425,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6D8317E1BA32EAB008C9594 /* Build configuration list for PBXNativeTarget "PureXMLOSXTests" */;
 			buildPhases = (
+				E90427AC7CE307E26E16E8C5 /* Check Pods Manifest.lock */,
 				F6D8316F1BA32EAB008C9594 /* Sources */,
 				F6D831701BA32EAB008C9594 /* Frameworks */,
 				F6D831711BA32EAB008C9594 /* Resources */,
+				965B071C49E1F05889AD2894 /* Embed Pods Frameworks */,
+				D604F24E59A936F4A986AA18 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -433,6 +498,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6DC11A01BE3D06000403E4B /* simpleStream.xml in Resources */,
 				F6D831C21BA33FAC008C9594 /* text.xml in Resources */,
 				F6D831BF1BA33F9A008C9594 /* simpleDocument.xml in Resources */,
 			);
@@ -449,12 +515,106 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6DC11A11BE3D06000403E4B /* simpleStream.xml in Resources */,
 				F6D831C31BA33FAC008C9594 /* text.xml in Resources */,
 				F6D831C01BA33F9A008C9594 /* simpleDocument.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		965B071C49E1F05889AD2894 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PureXMLOSXTests/Pods-PureXMLOSXTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9939F3C388A69587255C605D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C3519155D7F4959EA826E817 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PureXMLiOSTests/Pods-PureXMLiOSTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D604F24E59A936F4A986AA18 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PureXMLOSXTests/Pods-PureXMLOSXTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E90427AC7CE307E26E16E8C5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EA572A55D04A2927EDC17C60 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PureXMLiOSTests/Pods-PureXMLiOSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F6D831481BA32E2D008C9594 /* Sources */ = {
@@ -465,6 +625,7 @@
 				F6D831881BA33B0B008C9594 /* PXDocument.m in Sources */,
 				F6D8318F1BA33BAB008C9594 /* PXNode.m in Sources */,
 				F6D831951BA33C17008C9594 /* PXElement.m in Sources */,
+				F6DC11991BE3CD5C00403E4B /* PXInputStream.m in Sources */,
 				F612A3B21BA346850014DEEE /* PXDocumentValueTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,6 +635,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6D831BB1BA33EA3008C9594 /* PXTextTests.m in Sources */,
+				F6DC119D1BE3CEB400403E4B /* PXInputStreamTests.m in Sources */,
 				F6D831B91BA33EA3008C9594 /* PXNodeTests.m in Sources */,
 				F681481A1BE3C32D00B4DF56 /* PXDocumentTests.m in Sources */,
 				F6D831B71BA33EA3008C9594 /* PXElementTests.m in Sources */,
@@ -488,6 +650,7 @@
 				F6D831891BA33B0B008C9594 /* PXDocument.m in Sources */,
 				F6D831901BA33BAB008C9594 /* PXNode.m in Sources */,
 				F6D831961BA33C17008C9594 /* PXElement.m in Sources */,
+				F6DC119A1BE3CD5C00403E4B /* PXInputStream.m in Sources */,
 				F612A3B31BA346850014DEEE /* PXDocumentValueTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +660,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6D831BC1BA33EA3008C9594 /* PXTextTests.m in Sources */,
+				F6DC119E1BE3CEB400403E4B /* PXInputStreamTests.m in Sources */,
 				F6D831BA1BA33EA3008C9594 /* PXNodeTests.m in Sources */,
 				F681481B1BE3C33600B4DF56 /* PXDocumentTests.m in Sources */,
 				F6D831B81BA33EA3008C9594 /* PXElementTests.m in Sources */,
@@ -647,6 +811,7 @@
 		};
 		F6D831631BA32E2D008C9594 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56B63A56FA09A0386B454332 /* Pods-PureXMLiOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -693,6 +858,7 @@
 		};
 		F6D831641BA32E2D008C9594 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 744B1438778719B43E86645B /* Pods-PureXMLiOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -842,6 +1008,7 @@
 		};
 		F6D8317F1BA32EAB008C9594 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD7C25B80E99CDC845310BB1 /* Pods-PureXMLOSXTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -889,6 +1056,7 @@
 		};
 		F6D831801BA32EAB008C9594 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EB97442B4E287231EBE8FE6 /* Pods-PureXMLOSXTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";

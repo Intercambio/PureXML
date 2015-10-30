@@ -20,3 +20,4 @@ FOUNDATION_EXPORT const unsigned char PureXMLVersionString[];
 #import <PureXML/PXNode.h>
 #import <PureXML/PXElement.h>
 #import <PureXML/PXText.h>
+#import <PureXML/PXInputStream.h>

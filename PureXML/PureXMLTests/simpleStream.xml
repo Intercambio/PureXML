@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<stream:stream
+    xmlns="jabber:client"
+    xmlns:stream="http://etherx.jabber.org/streams"
+    from="juliet@im.example.com"
+    to="im.example.com"
+    version="1.0"
+    xml:lang="en">
+    <foo>
+        <body>foo</body>
+    </foo>
+    <bar>
+        <body>foo</body>
+    </bar>
+</stream:stream>
