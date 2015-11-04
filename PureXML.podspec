@@ -1,6 +1,7 @@
+# coding: utf-8
 Pod::Spec.new do |s|
   s.name                = "PureXML"
-  s.version             = "1.0.beta.1"
+  s.version             = "1.0.beta.3"
   s.summary             = "Lightweight wrapper around libxml."
   
   s.authors             = { "Tobias Kräntzer" => "info@tobias-kraentzer.de" }
