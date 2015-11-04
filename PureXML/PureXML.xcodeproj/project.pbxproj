@@ -128,8 +128,8 @@
 		F6DC11961BE3CD5C00403E4B /* PXInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXInputStream.m; path = PureXML/PXInputStream.m; sourceTree = "<group>"; };
 		F6DC119C1BE3CEB400403E4B /* PXInputStreamTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXInputStreamTests.m; sourceTree = "<group>"; };
 		F6DC119F1BE3D06000403E4B /* simpleStream.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = simpleStream.xml; sourceTree = "<group>"; };
-		F6DC11A21BE3D29A00403E4B /* PXOutputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXOutputStream.h; sourceTree = "<group>"; };
-		F6DC11A31BE3D29A00403E4B /* PXOutputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXOutputStream.m; sourceTree = "<group>"; };
+		F6DC11A21BE3D29A00403E4B /* PXOutputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PXOutputStream.h; path = PureXML/PXOutputStream.h; sourceTree = "<group>"; };
+		F6DC11A31BE3D29A00403E4B /* PXOutputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PXOutputStream.m; path = PureXML/PXOutputStream.m; sourceTree = "<group>"; };
 		F6DC11A81BE3D74400403E4B /* PXOutputStreamTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXOutputStreamTests.m; sourceTree = "<group>"; };
 		F6DC11AB1BE3D76F00403E4B /* streamHeader.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = streamHeader.xml; sourceTree = "<group>"; };
 		F6DC11AC1BE3D76F00403E4B /* element.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = element.xml; sourceTree = "<group>"; };
