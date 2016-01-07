@@ -60,23 +60,23 @@ int XSOutputStream_xmlOutputCloseCallback(void *context);
 {
     xmlDocPtr doc = element.document.xmlDoc;
     xmlNodePtr node = element.xmlNode;
-    
+
     xmlTextWriterStartDocument(_writer, (const char *)doc->version, (const char *)doc->encoding, NULL);
-    
+
     if (node->ns) {
         xmlTextWriterStartElementNS(_writer, node->ns->prefix, node->name, node->ns->href);
     } else {
         xmlTextWriterStartElement(_writer, node->name);
     }
-    
-    for(xmlAttrPtr attr = element.xmlNode->properties; attr != nil; attr = attr->next) {
+
+    for (xmlAttrPtr attr = element.xmlNode->properties; attr != nil; attr = attr->next) {
         if (attr->ns) {
             xmlTextWriterWriteAttributeNS(_writer, attr->ns->prefix, attr->name, attr->ns->href, xmlNodeGetContent(attr->children));
         } else {
             xmlTextWriterWriteAttribute(_writer, attr->name, xmlNodeGetContent(attr->children));
         }
     }
-    
+
     xmlTextWriterWriteRaw(_writer, BAD_CAST "\n");
     xmlTextWriterFlush(_writer);
 }
@@ -84,9 +84,9 @@ int XSOutputStream_xmlOutputCloseCallback(void *context);
 - (void)sendElement:(PXElement *)element
 {
     xmlNodePtr node = element.xmlNode;
-    
+
     xmlTextWriterWriteNode(_writer, node);
-    
+
     xmlTextWriterWriteRaw(_writer, BAD_CAST "\n");
     xmlTextWriterFlush(_writer);
 }
@@ -124,27 +124,27 @@ int XSOutputStream_xmlOutputCloseCallback(void *context)
 XMLPUBFUN int XMLCALL xmlTextWriterWriteNode(xmlTextWriterPtr writer, xmlNodePtr node)
 {
     switch (node->type) {
-        case XML_ELEMENT_NODE:
-            return xmlTextWriterWriteElementNode(writer, node);
-            
-        case XML_TEXT_NODE:
-            return xmlTextWriterWriteTextNode(writer, node);
-            
-        default:
-            break;
+    case XML_ELEMENT_NODE:
+        return xmlTextWriterWriteElementNode(writer, node);
+
+    case XML_TEXT_NODE:
+        return xmlTextWriterWriteTextNode(writer, node);
+
+    default:
+        break;
     }
-    
+
     return 0;
 }
 
 XMLPUBFUN int XMLCALL xmlTextWriterWriteElementNode(xmlTextWriterPtr writer, xmlNodePtr node)
 {
     assert(node->type == XML_ELEMENT_NODE);
-    
+
     int sum = 0;
-    
+
     // Start Element
-    
+
     int namespaceDeclaredInNode = 0;
     if (node->ns) {
         for (xmlNsPtr ns = node->nsDef; ns != NULL; ns = ns->next) {
@@ -154,32 +154,32 @@ XMLPUBFUN int XMLCALL xmlTextWriterWriteElementNode(xmlTextWriterPtr writer, xml
             }
         }
     }
-    
+
     if (namespaceDeclaredInNode) {
         sum += xmlTextWriterStartElementNS(writer, node->ns->prefix, node->name, node->ns->href);
     } else {
         sum += xmlTextWriterStartElement(writer, node->name);
     }
-    
+
     // Attributes
-    
-    for(xmlAttrPtr attr = node->properties; attr != NULL; attr = attr->next) {
+
+    for (xmlAttrPtr attr = node->properties; attr != NULL; attr = attr->next) {
         if (attr->ns) {
             xmlTextWriterWriteAttributeNS(writer, attr->ns->prefix, attr->name, attr->ns->href, xmlNodeGetContent(attr->children));
         } else {
             xmlTextWriterWriteAttribute(writer, attr->name, xmlNodeGetContent(attr->children));
         }
     }
-    
+
     // Children
-    
+
     for (xmlNodePtr child = node->children; child != NULL; child = child->next) {
         xmlTextWriterWriteNode(writer, child);
     }
-    
+
     // End Element
     sum += xmlTextWriterEndElement(writer);
-    
+
     return sum;
 }
 
@@ -188,4 +188,3 @@ XMLPUBFUN int XMLCALL xmlTextWriterWriteTextNode(xmlTextWriterPtr writer, xmlNod
     assert(node->type == XML_TEXT_NODE);
     return xmlTextWriterWriteRaw(writer, xmlNodeGetContent(node));
 }
-

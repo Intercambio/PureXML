@@ -11,7 +11,7 @@
 @interface PXQName : NSObject <NSCopying>
 
 #pragma mark Life-cycle
-- (instancetype)initWithName:(NSString *)name namespace:(NSString *)namespace;
+- (instancetype)initWithName:(NSString *)name namespace:(NSString *) namespace;
 
 #pragma mark Name & Namespace
 @property (nonatomic, readonly) NSString *name;

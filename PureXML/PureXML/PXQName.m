@@ -12,7 +12,7 @@
 
 #pragma mark Life-cycle
 
-- (instancetype)initWithName:(NSString *)name namespace:(NSString *)namespace
+- (instancetype)initWithName:(NSString *)name namespace:(NSString *) namespace
 {
     self = [super init];
     if (self) {
@@ -29,11 +29,11 @@
     if (![self.name isEqualToString:object.name]) {
         return NO;
     }
-    
+
     if (![self.namespace isEqualToString:object.namespace]) {
         return NO;
     }
-    
+
     return YES;
 }
 
