@@ -24,16 +24,21 @@
 
 #pragma mark NSObject
 
+- (NSUInteger)hash
+{
+    return [self.name hash] * [self.namespace hash];
+}
+
 - (BOOL)isEqual:(PXQName *)object
 {
     if (![self.name isEqualToString:object.name]) {
         return NO;
     }
-
+    
     if (![self.namespace isEqualToString:object.namespace]) {
         return NO;
     }
-
+    
     return YES;
 }
 
@@ -41,7 +46,7 @@
 
 - (id)copyWithZone:(NSZone *)zone
 {
-    return [[PXQName alloc] initWithName:self.name namespace:self.namespace];
+    return self;
 }
 
 @end
