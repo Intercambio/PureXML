@@ -55,3 +55,9 @@
 }
 
 @end
+
+PXQName *
+PXQN(NSString *namespace, NSString *name)
+{
+    return [[PXQName alloc] initWithName:name namespace:namespace];
+}

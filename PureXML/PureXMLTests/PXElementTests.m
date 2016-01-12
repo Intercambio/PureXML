@@ -182,12 +182,12 @@
                                                          namespace:@"http://example.com/ns"
                                                             prefix:@"bar"];
     
-    PXQName *qname = [[PXQName alloc] initWithName:@"foo" namespace:@"http://example.com/ns"];
+    PXQName *qname = PXQN(@"http://example.com/ns", @"foo");
     XCTAssertEqualObjects(document.root.qualifiedName, qname);
     XCTAssertEqualObjects(document.root, qname);
     XCTAssertEqualObjects(qname, document.root);
     
-    PXQName *otherQName = [[PXQName alloc] initWithName:@"bar" namespace:@"http://example.com/ns"];
+    PXQName *otherQName = PXQN(@"http://example.com/ns", @"bar");
     XCTAssertNotEqualObjects(document.root.qualifiedName, otherQName);
     XCTAssertNotEqualObjects(document.root, otherQName);
     XCTAssertNotEqualObjects(otherQName, document.root);

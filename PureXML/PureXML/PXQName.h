@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface PXQName : NSObject <NSCopying>
 
 #pragma mark Life-cycle
@@ -18,3 +19,5 @@
 @property (nonatomic, readonly) NSString *namespace;
 
 @end
+
+PXQName * PXQN(NSString *namespace, NSString *name);
