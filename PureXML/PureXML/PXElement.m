@@ -21,12 +21,17 @@
 
 - (NSString *)name
 {
-    return [NSString stringWithUTF8String:(const char *)self.xmlNode->name];
+    return self.xmlNode->name ? [NSString stringWithUTF8String:(const char *)self.xmlNode->name] : nil;
 }
 
 - (NSString *) namespace
 {
-    return [NSString stringWithUTF8String:(const char *)self.xmlNode->ns->href];
+    return self.xmlNode->ns->href ? [NSString stringWithUTF8String:(const char *)self.xmlNode->ns->href] : nil;
+}
+
+- (NSString *)prefix
+{
+    return self.xmlNode->ns->prefix ? [NSString stringWithUTF8String:(const char *)self.xmlNode->ns->prefix] : nil;
 }
 
 #pragma mark Content
@@ -224,24 +229,18 @@
     }
 }
 
-- (PXElement *)addElementWithName:(NSString *)name namespace:(NSString *) namespace content:(NSString *)content
+- (PXElement *)addElementWithName:(NSString *)name namespace:(NSString *)namespace content:(NSString *)content
 {
-    xmlNsPtr ns = NULL;
+    xmlNodePtr element = xmlNewChild(self.xmlNode, NULL, BAD_CAST[name UTF8String], BAD_CAST[content UTF8String]);
+    
     if (namespace && ![namespace isEqualToString:self.namespace]) {
-        ns = xmlSearchNsByHref(self.document.xmlDoc, self.xmlNode, BAD_CAST[namespace UTF8String]);
+        xmlNsPtr ns = xmlSearchNsByHref(self.document.xmlDoc, element, BAD_CAST[namespace UTF8String]);
         if (ns == NULL) {
-            NSString *prefix = nil;
-            NSUInteger i = 1;
-            xmlNsPtr freeNS = NULL;
-            do {
-                prefix = [NSString stringWithFormat:@"x%lu", (unsigned long)i++];
-                freeNS = xmlSearchNs(self.document.xmlDoc, self.xmlNode, BAD_CAST[prefix UTF8String]);
-            } while (freeNS);
-            ns = xmlNewNs(self.xmlNode, BAD_CAST[namespace UTF8String], BAD_CAST[prefix UTF8String]);
+            ns = xmlNewNs(element, BAD_CAST[namespace UTF8String], NULL);
         }
+        xmlSetNs(element, ns);
     }
-
-    xmlNodePtr element = xmlNewChild(self.xmlNode, ns, BAD_CAST[name UTF8String], BAD_CAST[content UTF8String]);
+    
     return (PXElement *)[self.document nodeWithXmlNode:element];
 }
 
@@ -249,7 +248,7 @@
 {
     xmlNodePtr node = xmlCopyNode(element.xmlNode, 1);
     xmlAddChild(self.xmlNode, node);
-    xmlReconciliateNs(self.document.xmlDoc, node);
+    px_xmlReconciliateNs(self.document.xmlDoc, node);
     return (PXElement *)[self.document nodeWithXmlNode:node];
 }
 

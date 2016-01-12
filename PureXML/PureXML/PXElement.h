@@ -15,6 +15,7 @@
 #pragma mark Properties
 @property (nonatomic, readonly) NSString *name;
 @property (nonatomic, readonly) NSString *namespace;
+@property (nonatomic, readonly) NSString *prefix;
 
 #pragma mark Content
 @property (nonatomic, readwrite, copy) NSString *stringValue;

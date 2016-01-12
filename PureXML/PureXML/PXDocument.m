@@ -7,6 +7,7 @@
 //
 
 #import <libxml/tree.h>
+#import <libxml/xmlerror.h>
 
 #import "PXElement.h"
 #import "PXText.h"
@@ -67,7 +68,7 @@
     if (self) {
         xmlNodePtr node = xmlCopyNode(element.xmlNode, 1);
         xmlDocSetRootElement(_xmlDoc, node);
-        xmlReconciliateNs(_xmlDoc, node);
+        px_xmlReconciliateNs(_xmlDoc, node);
     }
     return self;
 }
@@ -113,7 +114,11 @@
 
 - (NSString *)description
 {
-    return [[NSString alloc] initWithData:[self data] encoding:NSUTF8StringEncoding];
+    xmlChar *buffer;
+    int size;
+    xmlDocDumpFormatMemory(_xmlDoc, &buffer, &size, 1);
+    NSData *data = [NSData dataWithBytesNoCopy:buffer length:size freeWhenDone:YES];
+    return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
 
 @end
@@ -149,3 +154,260 @@
 }
 
 @end
+
+XMLPUBFUN void XMLCALL
+__xmlSimpleError (int domain,
+                  int code,
+                  xmlNodePtr node,
+                  const char *msg,
+                  const char *extra);
+
+/**
+ * xmlTreeErrMemory:
+ * @extra:  extra informations
+ *
+ * Handle an out of memory condition
+ */
+static void
+xmlTreeErrMemory(const char *extra)
+{
+    __xmlSimpleError(XML_FROM_TREE, XML_ERR_NO_MEMORY, NULL, NULL, extra);
+}
+
+/**
+ * xmlNewReconciliedNs:
+ * @doc:  the document
+ * @tree:  a node expected to hold the new namespace
+ * @ns:  the original namespace
+ *
+ * This function tries to locate a namespace definition in a tree
+ * ancestors, or create a new namespace definition node similar to
+ * @ns trying to reuse the same prefix.
+ * Returns the (new) namespace definition or NULL in case of error
+ */
+static xmlNsPtr
+px_xmlNewReconciliedNs(xmlDocPtr doc, xmlNodePtr tree, xmlNsPtr ns) {
+    xmlNsPtr def;
+    
+    if ((tree == NULL) || (tree->type != XML_ELEMENT_NODE)) {
+#ifdef DEBUG_TREE
+        xmlGenericError(xmlGenericErrorContext,
+                        "xmlNewReconciliedNs : tree == NULL\n");
+#endif
+        return(NULL);
+    }
+    if ((ns == NULL) || (ns->type != XML_NAMESPACE_DECL)) {
+#ifdef DEBUG_TREE
+        xmlGenericError(xmlGenericErrorContext,
+                        "xmlNewReconciliedNs : ns == NULL\n");
+#endif
+        return(NULL);
+    }
+    /*
+     * Search an existing namespace definition inherited.
+     */
+    def = xmlSearchNsByHref(doc, tree, ns->href);
+    if (def != NULL)
+        return(def);
+    
+    /*
+     * OK, now we are ready to create a new one.
+     */
+    def = xmlNewNs(tree, ns->href, ns->prefix);
+    return(def);
+}
+
+/**
+ * xmlReconciliateNs:
+ * @doc:  the document
+ * @tree:  a node defining the subtree to reconciliate
+ *
+ * This function checks that all the namespaces declared within the given
+ * tree are properly declared. This is needed for example after Copy or Cut
+ * and then paste operations. The subtree may still hold pointers to
+ * namespace declarations outside the subtree or invalid/masked. As much
+ * as possible the function try to reuse the existing namespaces found in
+ * the new environment. If not possible the new namespaces are redeclared
+ * on @tree at the top of the given subtree.
+ * Returns the number of namespace declarations created or -1 in case of error.
+ */
+int
+px_xmlReconciliateNs(xmlDocPtr doc, xmlNodePtr tree) {
+    xmlNsPtr *oldNs = NULL;
+    xmlNsPtr *newNs = NULL;
+    int sizeCache = 0;
+    int nbCache = 0;
+    
+    xmlNsPtr n;
+    xmlNodePtr node = tree;
+    xmlAttrPtr attr;
+    int ret = 0, i;
+    
+    if ((node == NULL) || (node->type != XML_ELEMENT_NODE)) return(-1);
+    if ((doc == NULL) || (doc->type != XML_DOCUMENT_NODE)) return(-1);
+    if (node->doc != doc) return(-1);
+    while (node != NULL) {
+        /*
+         * Reconciliate the node namespace
+         */
+        if (node->ns != NULL) {
+            /*
+             * initialize the cache if needed
+             */
+            if (sizeCache == 0) {
+                sizeCache = 10;
+                oldNs = (xmlNsPtr *) xmlMalloc(sizeCache *
+                                               sizeof(xmlNsPtr));
+                if (oldNs == NULL) {
+                    xmlTreeErrMemory("fixing namespaces");
+                    return(-1);
+                }
+                newNs = (xmlNsPtr *) xmlMalloc(sizeCache *
+                                               sizeof(xmlNsPtr));
+                if (newNs == NULL) {
+                    xmlTreeErrMemory("fixing namespaces");
+                    xmlFree(oldNs);
+                    return(-1);
+                }
+            }
+            for (i = 0;i < nbCache;i++) {
+                if (oldNs[i] == node->ns) {
+                    node->ns = newNs[i];
+                    break;
+                }
+            }
+            if (i == nbCache) {
+                /*
+                 * OK we need to recreate a new namespace definition
+                 */
+                n = px_xmlNewReconciliedNs(doc, tree, node->ns);
+                if (n != NULL) { /* :-( what if else ??? */
+                    /*
+                     * check if we need to grow the cache buffers.
+                     */
+                    if (sizeCache <= nbCache) {
+                        sizeCache *= 2;
+                        oldNs = (xmlNsPtr *) xmlRealloc(oldNs, sizeCache *
+                                                        sizeof(xmlNsPtr));
+                        if (oldNs == NULL) {
+                            xmlTreeErrMemory("fixing namespaces");
+                            xmlFree(newNs);
+                            return(-1);
+                        }
+                        newNs = (xmlNsPtr *) xmlRealloc(newNs, sizeCache *
+                                                        sizeof(xmlNsPtr));
+                        if (newNs == NULL) {
+                            xmlTreeErrMemory("fixing namespaces");
+                            xmlFree(oldNs);
+                            return(-1);
+                        }
+                    }
+                    newNs[nbCache] = n;
+                    oldNs[nbCache++] = node->ns;
+                    node->ns = n;
+                }
+            }
+        }
+        /*
+         * now check for namespace hold by attributes on the node.
+         */
+        if (node->type == XML_ELEMENT_NODE) {
+            attr = node->properties;
+            while (attr != NULL) {
+                if (attr->ns != NULL) {
+                    /*
+                     * initialize the cache if needed
+                     */
+                    if (sizeCache == 0) {
+                        sizeCache = 10;
+                        oldNs = (xmlNsPtr *) xmlMalloc(sizeCache *
+                                                       sizeof(xmlNsPtr));
+                        if (oldNs == NULL) {
+                            xmlTreeErrMemory("fixing namespaces");
+                            return(-1);
+                        }
+                        newNs = (xmlNsPtr *) xmlMalloc(sizeCache *
+                                                       sizeof(xmlNsPtr));
+                        if (newNs == NULL) {
+                            xmlTreeErrMemory("fixing namespaces");
+                            xmlFree(oldNs);
+                            return(-1);
+                        }
+                    }
+                    for (i = 0;i < nbCache;i++) {
+                        if (oldNs[i] == attr->ns) {
+                            attr->ns = newNs[i];
+                            break;
+                        }
+                    }
+                    if (i == nbCache) {
+                        /*
+                         * OK we need to recreate a new namespace definition
+                         */
+                        n = px_xmlNewReconciliedNs(doc, tree, attr->ns);
+                        if (n != NULL) { /* :-( what if else ??? */
+                            /*
+                             * check if we need to grow the cache buffers.
+                             */
+                            if (sizeCache <= nbCache) {
+                                sizeCache *= 2;
+                                oldNs = (xmlNsPtr *) xmlRealloc(oldNs,
+                                                                sizeCache * sizeof(xmlNsPtr));
+                                if (oldNs == NULL) {
+                                    xmlTreeErrMemory("fixing namespaces");
+                                    xmlFree(newNs);
+                                    return(-1);
+                                }
+                                newNs = (xmlNsPtr *) xmlRealloc(newNs,
+                                                                sizeCache * sizeof(xmlNsPtr));
+                                if (newNs == NULL) {
+                                    xmlTreeErrMemory("fixing namespaces");
+                                    xmlFree(oldNs);
+                                    return(-1);
+                                }
+                            }
+                            newNs[nbCache] = n;
+                            oldNs[nbCache++] = attr->ns;
+                            attr->ns = n;
+                        }
+                    }
+                }
+                attr = attr->next;
+            }
+        }
+        
+        /*
+         * Browse the full subtree, deep first
+         */
+        if ((node->children != NULL) && (node->type != XML_ENTITY_REF_NODE)) {
+            /* deep first */
+            node = node->children;
+        } else if ((node != tree) && (node->next != NULL)) {
+            /* then siblings */
+            node = node->next;
+        } else if (node != tree) {
+            /* go up to parents->next if needed */
+            while (node != tree) {
+                if (node->parent != NULL)
+                    node = node->parent;
+                if ((node != tree) && (node->next != NULL)) {
+                    node = node->next;
+                    break;
+                }
+                if (node->parent == NULL) {
+                    node = NULL;
+                    break;
+                }
+            }
+            /* exit condition */
+            if (node == tree)
+                node = NULL;
+        } else
+            break;
+    }
+    if (oldNs != NULL)
+        xmlFree(oldNs);
+    if (newNs != NULL)
+        xmlFree(newNs);
+    return(ret);
+}

@@ -12,3 +12,5 @@
 @interface PXDocument (Private)
 - (PXNode *)nodeWithXmlNode:(xmlNodePtr)xmlNode;
 @end
+
+int px_xmlReconciliateNs(xmlDocPtr doc, xmlNodePtr tree);
