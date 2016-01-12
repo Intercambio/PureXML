@@ -176,4 +176,21 @@
     XCTAssertEqualObjects([nodes[0] namespace], @"jabber:client");
 }
 
+- (void)testEqualToQName
+{
+    PXDocument *document = [[PXDocument alloc] initWithElementName:@"foo"
+                                                         namespace:@"http://example.com/ns"
+                                                            prefix:@"bar"];
+    
+    PXQName *qname = [[PXQName alloc] initWithName:@"foo" namespace:@"http://example.com/ns"];
+    XCTAssertEqualObjects(document.root.qualifiedName, qname);
+    XCTAssertEqualObjects(document.root, qname);
+    XCTAssertEqualObjects(qname, document.root);
+    
+    PXQName *otherQName = [[PXQName alloc] initWithName:@"bar" namespace:@"http://example.com/ns"];
+    XCTAssertNotEqualObjects(document.root.qualifiedName, otherQName);
+    XCTAssertNotEqualObjects(document.root, otherQName);
+    XCTAssertNotEqualObjects(otherQName, document.root);
+}
+
 @end

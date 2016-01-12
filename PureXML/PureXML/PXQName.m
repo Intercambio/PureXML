@@ -6,6 +6,7 @@
 //  Copyright © 2016 Tobias Kräntzer. All rights reserved.
 //
 
+#import "PXElement.h"
 #import "PXQName.h"
 
 @implementation PXQName
@@ -31,15 +32,19 @@
 
 - (BOOL)isEqual:(PXQName *)object
 {
-    if (![self.name isEqualToString:object.name]) {
-        return NO;
+    if ([object isKindOfClass:[PXElement class]]) {
+        return [self isEqual:[(PXElement *)object qualifiedName]];
+    } else {
+        if (![self.name isEqualToString:object.name]) {
+            return NO;
+        }
+        
+        if (![self.namespace isEqualToString:object.namespace]) {
+            return NO;
+        }
+        
+        return YES;
     }
-    
-    if (![self.namespace isEqualToString:object.namespace]) {
-        return NO;
-    }
-    
-    return YES;
 }
 
 #pragma mark NSCopying

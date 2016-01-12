@@ -34,6 +34,17 @@
     return self.xmlNode->ns->prefix ? [NSString stringWithUTF8String:(const char *)self.xmlNode->ns->prefix] : nil;
 }
 
+- (PXQName *)qualifiedName
+{
+    NSString *name = self.name;
+    NSString *namespace = self.namespace;
+    if (name && namespace) {
+        return [[PXQName alloc] initWithName:self.name namespace:self.namespace];
+    } else {
+        return nil;
+    }
+}
+
 #pragma mark Content
 
 - (void)setStringValue:(NSString *)stringValue
@@ -257,6 +268,17 @@
 - (id)valueForUndefinedKey:(NSString *)key
 {
     return [self valueForAttribute:key];
+}
+
+#pragma mark NSObject
+
+- (BOOL)isEqual:(id)object
+{
+    if ([object isKindOfClass:[PXQName class]]) {
+        return [self.qualifiedName isEqual:object];
+    } else {
+        return [super isEqual:object];
+    }
 }
 
 @end

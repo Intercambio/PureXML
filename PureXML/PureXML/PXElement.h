@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Tobias Kräntzer. All rights reserved.
 //
 
+#import "PXQName.h"
 #import "PXNode.h"
 
 @class PXDocument;
@@ -16,6 +17,8 @@
 @property (nonatomic, readonly) NSString *name;
 @property (nonatomic, readonly) NSString *namespace;
 @property (nonatomic, readonly) NSString *prefix;
+
+@property (nonatomic, readonly) PXQName *qualifiedName;
 
 #pragma mark Content
 @property (nonatomic, readwrite, copy) NSString *stringValue;
