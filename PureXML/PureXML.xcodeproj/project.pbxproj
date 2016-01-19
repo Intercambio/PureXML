@@ -75,7 +75,6 @@
 		F6DC11AE1BE3D76F00403E4B /* streamHeader.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6DC11AB1BE3D76F00403E4B /* streamHeader.xml */; };
 		F6DC11AF1BE3D76F00403E4B /* element.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6DC11AC1BE3D76F00403E4B /* element.xml */; };
 		F6DC11B01BE3D76F00403E4B /* element.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6DC11AC1BE3D76F00403E4B /* element.xml */; };
-		F6DC3C391C4504CA007C0F48 /* LICENSE.md in Sources */ = {isa = PBXBuildFile; fileRef = F6DC3C381C4504CA007C0F48 /* LICENSE.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -661,7 +660,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6D831A41BA33DA2008C9594 /* PXText.m in Sources */,
-				F6DC3C391C4504CA007C0F48 /* LICENSE.md in Sources */,
 				F6D831881BA33B0B008C9594 /* PXDocument.m in Sources */,
 				F6D8318F1BA33BAB008C9594 /* PXNode.m in Sources */,
 				F6D831951BA33C17008C9594 /* PXElement.m in Sources */,
