@@ -1,0 +1,4 @@
+{
+  "phabricator.uri" : "https://garage.tobias-kraentzer.de",
+  "base": "git:branch-unique(develop)"
+}
