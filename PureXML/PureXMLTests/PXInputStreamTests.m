@@ -56,7 +56,6 @@
     assertThat(header.namespace, equalTo(@"http://etherx.jabber.org/streams"));
 
     NSArray *elements = [elementCaptor allValues];
-    assertThat(elements, hasCountOf(2));
 
     PXElement *element1 = [elements objectAtIndex:0];
     assertThat(element1, isA([PXElement class]));

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		89A26507DA3861680AB4979B /* libPods-PureXMLiOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8016FC73B5C312470DC8CF /* libPods-PureXMLiOSTests.a */; };
-		E07D20434B807A98464480A1 /* libPods-PureXMLOSXTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A77626DD93F0C52AFA8875D4 /* libPods-PureXMLOSXTests.a */; };
 		F612A3B01BA346850014DEEE /* PXDocumentValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = F612A3AE1BA346850014DEEE /* PXDocumentValueTransformer.h */; };
 		F612A3B11BA346850014DEEE /* PXDocumentValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = F612A3AE1BA346850014DEEE /* PXDocumentValueTransformer.h */; };
 		F612A3B21BA346850014DEEE /* PXDocumentValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = F612A3AF1BA346850014DEEE /* PXDocumentValueTransformer.m */; };
@@ -19,6 +17,14 @@
 		F6867C8D1C3EE963009617B5 /* PXQName.h in Headers */ = {isa = PBXBuildFile; fileRef = F6867C8A1C3EE963009617B5 /* PXQName.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6867C8E1C3EE963009617B5 /* PXQName.m in Sources */ = {isa = PBXBuildFile; fileRef = F6867C8B1C3EE963009617B5 /* PXQName.m */; };
 		F6867C8F1C3EE963009617B5 /* PXQName.m in Sources */ = {isa = PBXBuildFile; fileRef = F6867C8B1C3EE963009617B5 /* PXQName.m */; };
+		F6914EB11C7E58FE008CBED7 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6914EB01C7E58FE008CBED7 /* libxml2.tbd */; };
+		F6914EB21C7E5913008CBED7 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6914EB01C7E58FE008CBED7 /* libxml2.tbd */; };
+		F6914EB71C7E5956008CBED7 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6914EB51C7E5956008CBED7 /* OCHamcrest.framework */; };
+		F6914EB81C7E5956008CBED7 /* OCMockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6914EB61C7E5956008CBED7 /* OCMockito.framework */; };
+		F6914EBB1C7E596A008CBED7 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6914EB91C7E596A008CBED7 /* OCHamcrest.framework */; };
+		F6914EBC1C7E596A008CBED7 /* OCMockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6914EBA1C7E596A008CBED7 /* OCMockito.framework */; };
+		F6914EBE1C7E5A61008CBED7 /* OCHamcrest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6914EB91C7E596A008CBED7 /* OCHamcrest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6914EBF1C7E5A61008CBED7 /* OCMockito.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6914EBA1C7E596A008CBED7 /* OCMockito.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6D831511BA32E2D008C9594 /* PureXML.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D831501BA32E2D008C9594 /* PureXML.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6D831581BA32E2D008C9594 /* PureXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8314D1BA32E2D008C9594 /* PureXML.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		F6D831741BA32EAB008C9594 /* PureXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8316A1BA32EAB008C9594 /* PureXML.framework */; };
@@ -44,8 +50,6 @@
 		F6D831A41BA33DA2008C9594 /* PXText.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8319F1BA33DA2008C9594 /* PXText.m */; };
 		F6D831A51BA33DA2008C9594 /* PXText.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8319F1BA33DA2008C9594 /* PXText.m */; };
 		F6D831AC1BA33E30008C9594 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D831AB1BA33E30008C9594 /* libxml2.tbd */; };
-		F6D831AE1BA33E39008C9594 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D831AD1BA33E39008C9594 /* libxml2.tbd */; };
-		F6D831AF1BA33E57008C9594 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D831AD1BA33E39008C9594 /* libxml2.tbd */; };
 		F6D831B01BA33E5D008C9594 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D831AB1BA33E30008C9594 /* libxml2.tbd */; };
 		F6D831B71BA33EA3008C9594 /* PXElementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B21BA33EA3008C9594 /* PXElementTests.m */; };
 		F6D831B81BA33EA3008C9594 /* PXElementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B21BA33EA3008C9594 /* PXElementTests.m */; };
@@ -94,17 +98,31 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F6914EBD1C7E5A53008CBED7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F6914EBE1C7E5A61008CBED7 /* OCHamcrest.framework in CopyFiles */,
+				F6914EBF1C7E5A61008CBED7 /* OCMockito.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		1EB97442B4E287231EBE8FE6 /* Pods-PureXMLOSXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PureXMLOSXTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-PureXMLOSXTests/Pods-PureXMLOSXTests.release.xcconfig"; sourceTree = "<group>"; };
-		56B63A56FA09A0386B454332 /* Pods-PureXMLiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PureXMLiOSTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-PureXMLiOSTests/Pods-PureXMLiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5F8016FC73B5C312470DC8CF /* libPods-PureXMLiOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PureXMLiOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		744B1438778719B43E86645B /* Pods-PureXMLiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PureXMLiOSTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-PureXMLiOSTests/Pods-PureXMLiOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		A77626DD93F0C52AFA8875D4 /* libPods-PureXMLOSXTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PureXMLOSXTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F612A3AE1BA346850014DEEE /* PXDocumentValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXDocumentValueTransformer.h; sourceTree = "<group>"; };
 		F612A3AF1BA346850014DEEE /* PXDocumentValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXDocumentValueTransformer.m; sourceTree = "<group>"; };
 		F68148191BE150DD00B4DF56 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		F6867C8A1C3EE963009617B5 /* PXQName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXQName.h; sourceTree = "<group>"; };
 		F6867C8B1C3EE963009617B5 /* PXQName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXQName.m; sourceTree = "<group>"; };
+		F6914EB01C7E58FE008CBED7 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/usr/lib/libxml2.tbd; sourceTree = DEVELOPER_DIR; };
+		F6914EB51C7E5956008CBED7 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = ../Carthage/Build/iOS/OCHamcrest.framework; sourceTree = "<group>"; };
+		F6914EB61C7E5956008CBED7 /* OCMockito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMockito.framework; path = ../Carthage/Build/iOS/OCMockito.framework; sourceTree = "<group>"; };
+		F6914EB91C7E596A008CBED7 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = ../Carthage/Build/Mac/OCHamcrest.framework; sourceTree = "<group>"; };
+		F6914EBA1C7E596A008CBED7 /* OCMockito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMockito.framework; path = ../Carthage/Build/Mac/OCMockito.framework; sourceTree = "<group>"; };
 		F6D8314D1BA32E2D008C9594 /* PureXML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PureXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D831501BA32E2D008C9594 /* PureXML.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PureXML.h; sourceTree = "<group>"; };
 		F6D831521BA32E2D008C9594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,7 +141,6 @@
 		F6D8319E1BA33DA2008C9594 /* PXText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXText.h; sourceTree = "<group>"; };
 		F6D8319F1BA33DA2008C9594 /* PXText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXText.m; sourceTree = "<group>"; };
 		F6D831AB1BA33E30008C9594 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
-		F6D831AD1BA33E39008C9594 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/usr/lib/libxml2.tbd; sourceTree = DEVELOPER_DIR; };
 		F6D831B11BA33EA3008C9594 /* PXDocumentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXDocumentTests.m; sourceTree = "<group>"; };
 		F6D831B21BA33EA3008C9594 /* PXElementTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXElementTests.m; sourceTree = "<group>"; };
 		F6D831B31BA33EA3008C9594 /* PXNodeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXNodeTests.m; sourceTree = "<group>"; };
@@ -140,7 +157,6 @@
 		F6DC11AB1BE3D76F00403E4B /* streamHeader.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = streamHeader.xml; sourceTree = "<group>"; };
 		F6DC11AC1BE3D76F00403E4B /* element.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = element.xml; sourceTree = "<group>"; };
 		F6DC3C381C4504CA007C0F48 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = LICENSE.md; path = ../LICENSE.md; sourceTree = "<group>"; };
-		FD7C25B80E99CDC845310BB1 /* Pods-PureXMLOSXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PureXMLOSXTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-PureXMLOSXTests/Pods-PureXMLOSXTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6D831AF1BA33E57008C9594 /* libxml2.tbd in Frameworks */,
+				F6914EB11C7E58FE008CBED7 /* libxml2.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,9 +172,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6D831AE1BA33E39008C9594 /* libxml2.tbd in Frameworks */,
+				F6914EB71C7E5956008CBED7 /* OCHamcrest.framework in Frameworks */,
+				F6914EB81C7E5956008CBED7 /* OCMockito.framework in Frameworks */,
+				F6914EB21C7E5913008CBED7 /* libxml2.tbd in Frameworks */,
 				F6D831581BA32E2D008C9594 /* PureXML.framework in Frameworks */,
-				89A26507DA3861680AB4979B /* libPods-PureXMLiOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,26 +191,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6914EBB1C7E596A008CBED7 /* OCHamcrest.framework in Frameworks */,
+				F6914EBC1C7E596A008CBED7 /* OCMockito.framework in Frameworks */,
 				F6D831AC1BA33E30008C9594 /* libxml2.tbd in Frameworks */,
 				F6D831741BA32EAB008C9594 /* PureXML.framework in Frameworks */,
-				E07D20434B807A98464480A1 /* libPods-PureXMLOSXTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AD8F36D02B90DEB9C1569B11 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				FD7C25B80E99CDC845310BB1 /* Pods-PureXMLOSXTests.debug.xcconfig */,
-				1EB97442B4E287231EBE8FE6 /* Pods-PureXMLOSXTests.release.xcconfig */,
-				56B63A56FA09A0386B454332 /* Pods-PureXMLiOSTests.debug.xcconfig */,
-				744B1438778719B43E86645B /* Pods-PureXMLiOSTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		F612A3B41BA3468D0014DEEE /* Value Transformer */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +246,26 @@
 			name = Nodes;
 			sourceTree = "<group>";
 		};
+		F6914EB31C7E591C008CBED7 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F6914EB01C7E58FE008CBED7 /* libxml2.tbd */,
+				F6914EB51C7E5956008CBED7 /* OCHamcrest.framework */,
+				F6914EB61C7E5956008CBED7 /* OCMockito.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F6914EB41C7E5923008CBED7 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				F6D831AB1BA33E30008C9594 /* libxml2.tbd */,
+				F6914EB91C7E596A008CBED7 /* OCHamcrest.framework */,
+				F6914EBA1C7E596A008CBED7 /* OCMockito.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
 		F6D831411BA32E12008C9594 = {
 			isa = PBXGroup;
 			children = (
@@ -247,7 +274,6 @@
 				F6D8315B1BA32E2D008C9594 /* PureXMLTests */,
 				F6D831AA1BA33E21008C9594 /* Frameworks */,
 				F6D8314E1BA32E2D008C9594 /* Products */,
-				AD8F36D02B90DEB9C1569B11 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -315,10 +341,8 @@
 		F6D831AA1BA33E21008C9594 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F6D831AD1BA33E39008C9594 /* libxml2.tbd */,
-				F6D831AB1BA33E30008C9594 /* libxml2.tbd */,
-				A77626DD93F0C52AFA8875D4 /* libPods-PureXMLOSXTests.a */,
-				5F8016FC73B5C312470DC8CF /* libPods-PureXMLiOSTests.a */,
+				F6914EB31C7E591C008CBED7 /* iOS */,
+				F6914EB41C7E5923008CBED7 /* OS X */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -420,12 +444,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6D831621BA32E2D008C9594 /* Build configuration list for PBXNativeTarget "PureXMLiOSTests" */;
 			buildPhases = (
-				9939F3C388A69587255C605D /* Check Pods Manifest.lock */,
 				F6D831531BA32E2D008C9594 /* Sources */,
 				F6D831541BA32E2D008C9594 /* Frameworks */,
 				F6D831551BA32E2D008C9594 /* Resources */,
-				EA572A55D04A2927EDC17C60 /* Embed Pods Frameworks */,
-				C3519155D7F4959EA826E817 /* Copy Pods Resources */,
+				F6914EC01C7E5B40008CBED7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -459,12 +481,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6D8317E1BA32EAB008C9594 /* Build configuration list for PBXNativeTarget "PureXMLOSXTests" */;
 			buildPhases = (
-				E90427AC7CE307E26E16E8C5 /* Check Pods Manifest.lock */,
 				F6D8316F1BA32EAB008C9594 /* Sources */,
 				F6D831701BA32EAB008C9594 /* Frameworks */,
 				F6D831711BA32EAB008C9594 /* Resources */,
-				965B071C49E1F05889AD2894 /* Embed Pods Frameworks */,
-				D604F24E59A936F4A986AA18 /* Copy Pods Resources */,
+				F6914EBD1C7E5A53008CBED7 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -562,95 +582,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		965B071C49E1F05889AD2894 /* Embed Pods Frameworks */ = {
+		F6914EC01C7E5B40008CBED7 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/../Carthage/Build/iOS/OCHamcrest.framework",
+				"$(SRCROOT)/../Carthage/Build/iOS/OCMockito.framework",
 			);
-			name = "Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PureXMLOSXTests/Pods-PureXMLOSXTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9939F3C388A69587255C605D /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		C3519155D7F4959EA826E817 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PureXMLiOSTests/Pods-PureXMLiOSTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D604F24E59A936F4A986AA18 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PureXMLOSXTests/Pods-PureXMLOSXTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E90427AC7CE307E26E16E8C5 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		EA572A55D04A2927EDC17C60 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PureXMLiOSTests/Pods-PureXMLiOSTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -855,7 +800,6 @@
 		};
 		F6D831631BA32E2D008C9594 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56B63A56FA09A0386B454332 /* Pods-PureXMLiOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -875,6 +819,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -902,7 +847,6 @@
 		};
 		F6D831641BA32E2D008C9594 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 744B1438778719B43E86645B /* Pods-PureXMLiOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -922,6 +866,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1052,7 +997,6 @@
 		};
 		F6D8317F1BA32EAB008C9594 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD7C25B80E99CDC845310BB1 /* Pods-PureXMLOSXTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1073,6 +1017,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/Mac";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1100,7 +1045,6 @@
 		};
 		F6D831801BA32EAB008C9594 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EB97442B4E287231EBE8FE6 /* Pods-PureXMLOSXTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1121,6 +1065,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Carthage/Build/Mac";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
