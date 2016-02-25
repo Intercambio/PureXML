@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F612A3B01BA346850014DEEE /* PXDocumentValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = F612A3AE1BA346850014DEEE /* PXDocumentValueTransformer.h */; };
-		F612A3B11BA346850014DEEE /* PXDocumentValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = F612A3AE1BA346850014DEEE /* PXDocumentValueTransformer.h */; };
+		F612A3B01BA346850014DEEE /* PXDocumentValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = F612A3AE1BA346850014DEEE /* PXDocumentValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F612A3B11BA346850014DEEE /* PXDocumentValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = F612A3AE1BA346850014DEEE /* PXDocumentValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F612A3B21BA346850014DEEE /* PXDocumentValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = F612A3AF1BA346850014DEEE /* PXDocumentValueTransformer.m */; };
 		F612A3B31BA346850014DEEE /* PXDocumentValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = F612A3AF1BA346850014DEEE /* PXDocumentValueTransformer.m */; };
 		F681481A1BE3C32D00B4DF56 /* PXDocumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B11BA33EA3008C9594 /* PXDocumentTests.m */; };
