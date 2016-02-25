@@ -68,10 +68,10 @@
     PXElement *barElement = [document.root addElementWithName:@"bar" namespace:@"ns2" content:nil];
     PXElement *bazElement = [barElement addElementWithName:@"baz" namespace:@"ns2" content:@"123"];
     [bazElement addElementWithName:@"foo" namespace:@"ns1" content:nil];
-    
+
     PXDocument *copiedDocument = [[PXDocument alloc] initWithElement:document.root];
     PXElement *copiedBarElement = [copiedDocument.root elementAtIndex:0];
-    
+
     XCTAssertEqualObjects(copiedBarElement.name, @"bar");
     XCTAssertEqualObjects(copiedBarElement.namespace, @"ns2");
     XCTAssertNil(copiedBarElement.prefix);

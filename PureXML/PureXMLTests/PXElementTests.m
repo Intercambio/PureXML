@@ -181,12 +181,12 @@
     PXDocument *document = [[PXDocument alloc] initWithElementName:@"foo"
                                                          namespace:@"http://example.com/ns"
                                                             prefix:@"bar"];
-    
+
     PXQName *qname = PXQN(@"http://example.com/ns", @"foo");
     XCTAssertEqualObjects(document.root.qualifiedName, qname);
     XCTAssertEqualObjects(document.root, qname);
     XCTAssertEqualObjects(qname, document.root);
-    
+
     PXQName *otherQName = PXQN(@"http://example.com/ns", @"bar");
     XCTAssertNotEqualObjects(document.root.qualifiedName, otherQName);
     XCTAssertNotEqualObjects(document.root, otherQName);

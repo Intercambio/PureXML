@@ -25,6 +25,10 @@
 		F6914EBC1C7E596A008CBED7 /* OCMockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6914EBA1C7E596A008CBED7 /* OCMockito.framework */; };
 		F6914EBE1C7E5A61008CBED7 /* OCHamcrest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6914EB91C7E596A008CBED7 /* OCHamcrest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6914EBF1C7E5A61008CBED7 /* OCMockito.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6914EBA1C7E596A008CBED7 /* OCMockito.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F69A04011C7EF15D00308F85 /* NSString+PureXML.h in Headers */ = {isa = PBXBuildFile; fileRef = F69A03FF1C7EF15D00308F85 /* NSString+PureXML.h */; };
+		F69A04021C7EF15D00308F85 /* NSString+PureXML.h in Headers */ = {isa = PBXBuildFile; fileRef = F69A03FF1C7EF15D00308F85 /* NSString+PureXML.h */; };
+		F69A04031C7EF15D00308F85 /* NSString+PureXML.m in Sources */ = {isa = PBXBuildFile; fileRef = F69A04001C7EF15D00308F85 /* NSString+PureXML.m */; };
+		F69A04041C7EF15D00308F85 /* NSString+PureXML.m in Sources */ = {isa = PBXBuildFile; fileRef = F69A04001C7EF15D00308F85 /* NSString+PureXML.m */; };
 		F6D831511BA32E2D008C9594 /* PureXML.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D831501BA32E2D008C9594 /* PureXML.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6D831581BA32E2D008C9594 /* PureXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8314D1BA32E2D008C9594 /* PureXML.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		F6D831741BA32EAB008C9594 /* PureXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6D8316A1BA32EAB008C9594 /* PureXML.framework */; };
@@ -123,6 +127,8 @@
 		F6914EB61C7E5956008CBED7 /* OCMockito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMockito.framework; path = ../Carthage/Build/iOS/OCMockito.framework; sourceTree = "<group>"; };
 		F6914EB91C7E596A008CBED7 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = ../Carthage/Build/Mac/OCHamcrest.framework; sourceTree = "<group>"; };
 		F6914EBA1C7E596A008CBED7 /* OCMockito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMockito.framework; path = ../Carthage/Build/Mac/OCMockito.framework; sourceTree = "<group>"; };
+		F69A03FF1C7EF15D00308F85 /* NSString+PureXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PureXML.h"; sourceTree = "<group>"; };
+		F69A04001C7EF15D00308F85 /* NSString+PureXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PureXML.m"; sourceTree = "<group>"; };
 		F6D8314D1BA32E2D008C9594 /* PureXML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PureXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D831501BA32E2D008C9594 /* PureXML.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PureXML.h; sourceTree = "<group>"; };
 		F6D831521BA32E2D008C9594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -266,6 +272,15 @@
 			name = "OS X";
 			sourceTree = "<group>";
 		};
+		F69A04051C7EF2DE00308F85 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				F69A03FF1C7EF15D00308F85 /* NSString+PureXML.h */,
+				F69A04001C7EF15D00308F85 /* NSString+PureXML.m */,
+			);
+			name = Additions;
+			sourceTree = "<group>";
+		};
 		F6D831411BA32E12008C9594 = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +311,7 @@
 				F6DC11941BE3CD3300403E4B /* Stream */,
 				F612A3B41BA3468D0014DEEE /* Value Transformer */,
 				F612A3B51BA346CE0014DEEE /* Supporting Files */,
+				F69A04051C7EF2DE00308F85 /* Additions */,
 			);
 			path = PureXML;
 			sourceTree = "<group>";
@@ -391,6 +407,7 @@
 				F612A3B01BA346850014DEEE /* PXDocumentValueTransformer.h in Headers */,
 				F6D831A01BA33DA2008C9594 /* PXNode+Private.h in Headers */,
 				F6D831991BA33CC1008C9594 /* PXDocument+Private.h in Headers */,
+				F69A04011C7EF15D00308F85 /* NSString+PureXML.h in Headers */,
 				F6D8318D1BA33BAB008C9594 /* PXNode.h in Headers */,
 				F6D831511BA32E2D008C9594 /* PureXML.h in Headers */,
 				F6D831861BA33B0B008C9594 /* PXDocument.h in Headers */,
@@ -409,6 +426,7 @@
 				F612A3B11BA346850014DEEE /* PXDocumentValueTransformer.h in Headers */,
 				F6D831A11BA33DA2008C9594 /* PXNode+Private.h in Headers */,
 				F6D8319A1BA33CC1008C9594 /* PXDocument+Private.h in Headers */,
+				F69A04021C7EF15D00308F85 /* NSString+PureXML.h in Headers */,
 				F6D8318E1BA33BAB008C9594 /* PXNode.h in Headers */,
 				F6D831811BA339A4008C9594 /* PureXML.h in Headers */,
 				F6D831871BA33B0B008C9594 /* PXDocument.h in Headers */,
@@ -609,6 +627,7 @@
 				F6D8318F1BA33BAB008C9594 /* PXNode.m in Sources */,
 				F6D831951BA33C17008C9594 /* PXElement.m in Sources */,
 				F6DC11991BE3CD5C00403E4B /* PXInputStream.m in Sources */,
+				F69A04031C7EF15D00308F85 /* NSString+PureXML.m in Sources */,
 				F6DC11A61BE3D29A00403E4B /* PXOutputStream.m in Sources */,
 				F6867C8E1C3EE963009617B5 /* PXQName.m in Sources */,
 				F612A3B21BA346850014DEEE /* PXDocumentValueTransformer.m in Sources */,
@@ -637,6 +656,7 @@
 				F6D831901BA33BAB008C9594 /* PXNode.m in Sources */,
 				F6D831961BA33C17008C9594 /* PXElement.m in Sources */,
 				F6DC119A1BE3CD5C00403E4B /* PXInputStream.m in Sources */,
+				F69A04041C7EF15D00308F85 /* NSString+PureXML.m in Sources */,
 				F6DC11A71BE3D29A00403E4B /* PXOutputStream.m in Sources */,
 				F6867C8F1C3EE963009617B5 /* PXQName.m in Sources */,
 				F612A3B31BA346850014DEEE /* PXDocumentValueTransformer.m in Sources */,

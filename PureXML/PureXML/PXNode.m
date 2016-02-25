@@ -10,6 +10,8 @@
 #import <libxml/xpath.h>
 #import <libxml/xpathInternals.h>
 
+#import "NSString+PureXML.h"
+
 #import "PXDocument.h"
 #import "PXDocument+Private.h"
 #import "PXElement.h"
@@ -55,7 +57,7 @@
 
 - (NSString *)stringValue
 {
-    return [NSString stringWithUTF8String:(const char *)xmlNodeGetContent(self.xmlNode)];
+    return [NSString px_stringWithContentOfXMLNode:self.xmlNode];
 }
 
 #pragma mark XPath

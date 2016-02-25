@@ -38,11 +38,11 @@
         if (![self.name isEqualToString:object.name]) {
             return NO;
         }
-        
+
         if (![self.namespace isEqualToString:object.namespace]) {
             return NO;
         }
-        
+
         return YES;
     }
 }

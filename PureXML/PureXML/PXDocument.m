@@ -156,11 +156,11 @@
 @end
 
 XMLPUBFUN void XMLCALL
-__xmlSimpleError (int domain,
-                  int code,
-                  xmlNodePtr node,
-                  const char *msg,
-                  const char *extra);
+__xmlSimpleError(int domain,
+                 int code,
+                 xmlNodePtr node,
+                 const char *msg,
+                 const char *extra);
 
 /**
  * xmlTreeErrMemory:
@@ -186,35 +186,36 @@ xmlTreeErrMemory(const char *extra)
  * Returns the (new) namespace definition or NULL in case of error
  */
 static xmlNsPtr
-px_xmlNewReconciliedNs(xmlDocPtr doc, xmlNodePtr tree, xmlNsPtr ns) {
+px_xmlNewReconciliedNs(xmlDocPtr doc, xmlNodePtr tree, xmlNsPtr ns)
+{
     xmlNsPtr def;
-    
+
     if ((tree == NULL) || (tree->type != XML_ELEMENT_NODE)) {
 #ifdef DEBUG_TREE
         xmlGenericError(xmlGenericErrorContext,
                         "xmlNewReconciliedNs : tree == NULL\n");
 #endif
-        return(NULL);
+        return (NULL);
     }
     if ((ns == NULL) || (ns->type != XML_NAMESPACE_DECL)) {
 #ifdef DEBUG_TREE
         xmlGenericError(xmlGenericErrorContext,
                         "xmlNewReconciliedNs : ns == NULL\n");
 #endif
-        return(NULL);
+        return (NULL);
     }
     /*
      * Search an existing namespace definition inherited.
      */
     def = xmlSearchNsByHref(doc, tree, ns->href);
     if (def != NULL)
-        return(def);
-    
+        return (def);
+
     /*
      * OK, now we are ready to create a new one.
      */
     def = xmlNewNs(tree, ns->href, ns->prefix);
-    return(def);
+    return (def);
 }
 
 /**
@@ -231,21 +232,24 @@ px_xmlNewReconciliedNs(xmlDocPtr doc, xmlNodePtr tree, xmlNsPtr ns) {
  * on @tree at the top of the given subtree.
  * Returns the number of namespace declarations created or -1 in case of error.
  */
-int
-px_xmlReconciliateNs(xmlDocPtr doc, xmlNodePtr tree) {
+int px_xmlReconciliateNs(xmlDocPtr doc, xmlNodePtr tree)
+{
     xmlNsPtr *oldNs = NULL;
     xmlNsPtr *newNs = NULL;
     int sizeCache = 0;
     int nbCache = 0;
-    
+
     xmlNsPtr n;
     xmlNodePtr node = tree;
     xmlAttrPtr attr;
     int ret = 0, i;
-    
-    if ((node == NULL) || (node->type != XML_ELEMENT_NODE)) return(-1);
-    if ((doc == NULL) || (doc->type != XML_DOCUMENT_NODE)) return(-1);
-    if (node->doc != doc) return(-1);
+
+    if ((node == NULL) || (node->type != XML_ELEMENT_NODE))
+        return (-1);
+    if ((doc == NULL) || (doc->type != XML_DOCUMENT_NODE))
+        return (-1);
+    if (node->doc != doc)
+        return (-1);
     while (node != NULL) {
         /*
          * Reconciliate the node namespace
@@ -256,21 +260,21 @@ px_xmlReconciliateNs(xmlDocPtr doc, xmlNodePtr tree) {
              */
             if (sizeCache == 0) {
                 sizeCache = 10;
-                oldNs = (xmlNsPtr *) xmlMalloc(sizeCache *
-                                               sizeof(xmlNsPtr));
+                oldNs = (xmlNsPtr *)xmlMalloc(sizeCache *
+                                              sizeof(xmlNsPtr));
                 if (oldNs == NULL) {
                     xmlTreeErrMemory("fixing namespaces");
-                    return(-1);
+                    return (-1);
                 }
-                newNs = (xmlNsPtr *) xmlMalloc(sizeCache *
-                                               sizeof(xmlNsPtr));
+                newNs = (xmlNsPtr *)xmlMalloc(sizeCache *
+                                              sizeof(xmlNsPtr));
                 if (newNs == NULL) {
                     xmlTreeErrMemory("fixing namespaces");
                     xmlFree(oldNs);
-                    return(-1);
+                    return (-1);
                 }
             }
-            for (i = 0;i < nbCache;i++) {
+            for (i = 0; i < nbCache; i++) {
                 if (oldNs[i] == node->ns) {
                     node->ns = newNs[i];
                     break;
@@ -287,19 +291,19 @@ px_xmlReconciliateNs(xmlDocPtr doc, xmlNodePtr tree) {
                      */
                     if (sizeCache <= nbCache) {
                         sizeCache *= 2;
-                        oldNs = (xmlNsPtr *) xmlRealloc(oldNs, sizeCache *
-                                                        sizeof(xmlNsPtr));
+                        oldNs = (xmlNsPtr *)xmlRealloc(oldNs, sizeCache *
+                                                                  sizeof(xmlNsPtr));
                         if (oldNs == NULL) {
                             xmlTreeErrMemory("fixing namespaces");
                             xmlFree(newNs);
-                            return(-1);
+                            return (-1);
                         }
-                        newNs = (xmlNsPtr *) xmlRealloc(newNs, sizeCache *
-                                                        sizeof(xmlNsPtr));
+                        newNs = (xmlNsPtr *)xmlRealloc(newNs, sizeCache *
+                                                                  sizeof(xmlNsPtr));
                         if (newNs == NULL) {
                             xmlTreeErrMemory("fixing namespaces");
                             xmlFree(oldNs);
-                            return(-1);
+                            return (-1);
                         }
                     }
                     newNs[nbCache] = n;
@@ -320,21 +324,21 @@ px_xmlReconciliateNs(xmlDocPtr doc, xmlNodePtr tree) {
                      */
                     if (sizeCache == 0) {
                         sizeCache = 10;
-                        oldNs = (xmlNsPtr *) xmlMalloc(sizeCache *
-                                                       sizeof(xmlNsPtr));
+                        oldNs = (xmlNsPtr *)xmlMalloc(sizeCache *
+                                                      sizeof(xmlNsPtr));
                         if (oldNs == NULL) {
                             xmlTreeErrMemory("fixing namespaces");
-                            return(-1);
+                            return (-1);
                         }
-                        newNs = (xmlNsPtr *) xmlMalloc(sizeCache *
-                                                       sizeof(xmlNsPtr));
+                        newNs = (xmlNsPtr *)xmlMalloc(sizeCache *
+                                                      sizeof(xmlNsPtr));
                         if (newNs == NULL) {
                             xmlTreeErrMemory("fixing namespaces");
                             xmlFree(oldNs);
-                            return(-1);
+                            return (-1);
                         }
                     }
-                    for (i = 0;i < nbCache;i++) {
+                    for (i = 0; i < nbCache; i++) {
                         if (oldNs[i] == attr->ns) {
                             attr->ns = newNs[i];
                             break;
@@ -351,19 +355,19 @@ px_xmlReconciliateNs(xmlDocPtr doc, xmlNodePtr tree) {
                              */
                             if (sizeCache <= nbCache) {
                                 sizeCache *= 2;
-                                oldNs = (xmlNsPtr *) xmlRealloc(oldNs,
-                                                                sizeCache * sizeof(xmlNsPtr));
+                                oldNs = (xmlNsPtr *)xmlRealloc(oldNs,
+                                                               sizeCache * sizeof(xmlNsPtr));
                                 if (oldNs == NULL) {
                                     xmlTreeErrMemory("fixing namespaces");
                                     xmlFree(newNs);
-                                    return(-1);
+                                    return (-1);
                                 }
-                                newNs = (xmlNsPtr *) xmlRealloc(newNs,
-                                                                sizeCache * sizeof(xmlNsPtr));
+                                newNs = (xmlNsPtr *)xmlRealloc(newNs,
+                                                               sizeCache * sizeof(xmlNsPtr));
                                 if (newNs == NULL) {
                                     xmlTreeErrMemory("fixing namespaces");
                                     xmlFree(oldNs);
-                                    return(-1);
+                                    return (-1);
                                 }
                             }
                             newNs[nbCache] = n;
@@ -375,7 +379,7 @@ px_xmlReconciliateNs(xmlDocPtr doc, xmlNodePtr tree) {
                 attr = attr->next;
             }
         }
-        
+
         /*
          * Browse the full subtree, deep first
          */
@@ -409,5 +413,5 @@ px_xmlReconciliateNs(xmlDocPtr doc, xmlNodePtr tree) {
         xmlFree(oldNs);
     if (newNs != NULL)
         xmlFree(newNs);
-    return(ret);
+    return (ret);
 }

@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface PXQName : NSObject <NSCopying>
 
 #pragma mark Life-cycle
@@ -20,4 +19,4 @@
 
 @end
 
-PXQName * PXQN(NSString *namespace, NSString *name);
+PXQName *PXQN(NSString *namespace, NSString *name);

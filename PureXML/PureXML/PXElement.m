@@ -8,6 +8,8 @@
 
 #import <libxml/tree.h>
 
+#import "NSString+PureXML.h"
+
 #import "PXDocument.h"
 #import "PXDocument+Private.h"
 #import "PXNode+Private.h"
@@ -80,11 +82,12 @@
 
     BOOL hasAttrNamespace = attr && attr->ns && attr->ns->href;
 
-    if (attr && xmlNodeGetContent(attr->children)) {
-        if (namespace != nil == hasAttrNamespace) {
-            return [NSString stringWithUTF8String:(const char *)xmlNodeGetContent(attr->children)];
+    if (namespace != nil == hasAttrNamespace) {
+        if (attr) {
+            return [NSString px_stringWithContentOfXMLNode:attr->children];
         }
     }
+
     return nil;
 }
 
@@ -99,7 +102,7 @@
 
         NSString *name = [NSString stringWithUTF8String:(const char *)attr->name];
         NSString *namespace = attr->ns ? [NSString stringWithUTF8String:(const char *)attr->ns->href] : nil;
-        NSString *value = [NSString stringWithUTF8String:(const char *)xmlNodeGetContent(attr->children)];
+        NSString *value = [NSString px_stringWithContentOfXMLNode:attr->children];
 
         block(name, value, namespace, &stop);
 
@@ -240,10 +243,10 @@
     }
 }
 
-- (PXElement *)addElementWithName:(NSString *)name namespace:(NSString *)namespace content:(NSString *)content
+- (PXElement *)addElementWithName:(NSString *)name namespace:(NSString *) namespace content:(NSString *)content
 {
     xmlNodePtr element = xmlNewChild(self.xmlNode, NULL, BAD_CAST[name UTF8String], BAD_CAST[content UTF8String]);
-    
+
     if (namespace && ![namespace isEqualToString:self.namespace]) {
         xmlNsPtr ns = xmlSearchNsByHref(self.document.xmlDoc, element, BAD_CAST[namespace UTF8String]);
         if (ns == NULL) {
@@ -251,7 +254,7 @@
         }
         xmlSetNs(element, ns);
     }
-    
+
     return (PXElement *)[self.document nodeWithXmlNode:element];
 }
 
