@@ -155,23 +155,16 @@
 
 @end
 
-XMLPUBFUN void XMLCALL
-__xmlSimpleError(int domain,
-                 int code,
-                 xmlNodePtr node,
-                 const char *msg,
-                 const char *extra);
-
 /**
- * xmlTreeErrMemory:
+ * px_xmlTreeErrMemory:
  * @extra:  extra informations
  *
  * Handle an out of memory condition
  */
 static void
-xmlTreeErrMemory(const char *extra)
+px_xmlTreeErrMemory(const char *extra)
 {
-    __xmlSimpleError(XML_FROM_TREE, XML_ERR_NO_MEMORY, NULL, NULL, extra);
+    NSCAssert(NO, @"Out of memory: %s", extra);
 }
 
 /**
@@ -263,13 +256,13 @@ int px_xmlReconciliateNs(xmlDocPtr doc, xmlNodePtr tree)
                 oldNs = (xmlNsPtr *)xmlMalloc(sizeCache *
                                               sizeof(xmlNsPtr));
                 if (oldNs == NULL) {
-                    xmlTreeErrMemory("fixing namespaces");
+                    px_xmlTreeErrMemory("fixing namespaces");
                     return (-1);
                 }
                 newNs = (xmlNsPtr *)xmlMalloc(sizeCache *
                                               sizeof(xmlNsPtr));
                 if (newNs == NULL) {
-                    xmlTreeErrMemory("fixing namespaces");
+                    px_xmlTreeErrMemory("fixing namespaces");
                     xmlFree(oldNs);
                     return (-1);
                 }
@@ -294,14 +287,14 @@ int px_xmlReconciliateNs(xmlDocPtr doc, xmlNodePtr tree)
                         oldNs = (xmlNsPtr *)xmlRealloc(oldNs, sizeCache *
                                                                   sizeof(xmlNsPtr));
                         if (oldNs == NULL) {
-                            xmlTreeErrMemory("fixing namespaces");
+                            px_xmlTreeErrMemory("fixing namespaces");
                             xmlFree(newNs);
                             return (-1);
                         }
                         newNs = (xmlNsPtr *)xmlRealloc(newNs, sizeCache *
                                                                   sizeof(xmlNsPtr));
                         if (newNs == NULL) {
-                            xmlTreeErrMemory("fixing namespaces");
+                            px_xmlTreeErrMemory("fixing namespaces");
                             xmlFree(oldNs);
                             return (-1);
                         }
@@ -327,13 +320,13 @@ int px_xmlReconciliateNs(xmlDocPtr doc, xmlNodePtr tree)
                         oldNs = (xmlNsPtr *)xmlMalloc(sizeCache *
                                                       sizeof(xmlNsPtr));
                         if (oldNs == NULL) {
-                            xmlTreeErrMemory("fixing namespaces");
+                            px_xmlTreeErrMemory("fixing namespaces");
                             return (-1);
                         }
                         newNs = (xmlNsPtr *)xmlMalloc(sizeCache *
                                                       sizeof(xmlNsPtr));
                         if (newNs == NULL) {
-                            xmlTreeErrMemory("fixing namespaces");
+                            px_xmlTreeErrMemory("fixing namespaces");
                             xmlFree(oldNs);
                             return (-1);
                         }
@@ -358,14 +351,14 @@ int px_xmlReconciliateNs(xmlDocPtr doc, xmlNodePtr tree)
                                 oldNs = (xmlNsPtr *)xmlRealloc(oldNs,
                                                                sizeCache * sizeof(xmlNsPtr));
                                 if (oldNs == NULL) {
-                                    xmlTreeErrMemory("fixing namespaces");
+                                    px_xmlTreeErrMemory("fixing namespaces");
                                     xmlFree(newNs);
                                     return (-1);
                                 }
                                 newNs = (xmlNsPtr *)xmlRealloc(newNs,
                                                                sizeCache * sizeof(xmlNsPtr));
                                 if (newNs == NULL) {
-                                    xmlTreeErrMemory("fixing namespaces");
+                                    px_xmlTreeErrMemory("fixing namespaces");
                                     xmlFree(oldNs);
                                     return (-1);
                                 }
