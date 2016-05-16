@@ -119,6 +119,7 @@
 /* Begin PBXFileReference section */
 		F612A3AE1BA346850014DEEE /* PXDocumentValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXDocumentValueTransformer.h; sourceTree = "<group>"; };
 		F612A3AF1BA346850014DEEE /* PXDocumentValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXDocumentValueTransformer.m; sourceTree = "<group>"; };
+		F64E48561CE9EBD900061CEB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F68148191BE150DD00B4DF56 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		F6867C8A1C3EE963009617B5 /* PXQName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXQName.h; sourceTree = "<group>"; };
 		F6867C8B1C3EE963009617B5 /* PXQName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXQName.m; sourceTree = "<group>"; };
@@ -284,6 +285,7 @@
 		F6D831411BA32E12008C9594 = {
 			isa = PBXGroup;
 			children = (
+				F64E48561CE9EBD900061CEB /* README.md */,
 				F6DC3C381C4504CA007C0F48 /* LICENSE.md */,
 				F6D8314F1BA32E2D008C9594 /* PureXML */,
 				F6D8315B1BA32E2D008C9594 /* PureXMLTests */,
