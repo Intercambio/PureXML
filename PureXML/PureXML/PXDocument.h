@@ -17,13 +17,20 @@ typedef xmlDoc *xmlDocPtr;
 
 + (instancetype)documentNamed:(NSString *)name;
 + (instancetype)documentNamed:(NSString *)name inBundle:(NSBundle *)bundle;
++ (instancetype)documentNamed:(NSString *)name inBundle:(NSBundle *)bundle usingElementClasses:(NSDictionary *)elementClasses;
 + (instancetype)documentWithData:(NSData *)data;
++ (instancetype)documentWithData:(NSData *)data usingElementClasses:(NSDictionary *)elementClasses;
 
 #pragma mark Life-cycle
 - (instancetype)init;
 - (instancetype)initWithElementName:(NSString *)name namespace:(NSString *)ns prefix:(NSString *)prefix;
+- (instancetype)initWithElementName:(NSString *)name namespace:(NSString *)ns prefix:(NSString *)prefix elementClasses:(NSDictionary *)elementClasses;
 - (instancetype)initWithElement:(PXElement *)element;
-- (instancetype)initWithXMLDoc:(xmlDocPtr)xmlDoc NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithXMLDoc:(xmlDocPtr)xmlDoc;
+- (instancetype)initWithXMLDoc:(xmlDocPtr)xmlDoc elementClasses:(NSDictionary *)elementClasses NS_DESIGNATED_INITIALIZER;
+
+#pragma mark Element Classes
+@property (nonatomic, readonly) NSDictionary *elementClasses;
 
 #pragma mark Document Data
 - (NSData *)data;

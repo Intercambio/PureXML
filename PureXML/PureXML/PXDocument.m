@@ -9,15 +9,17 @@
 #import <libxml/tree.h>
 #import <libxml/xmlerror.h>
 
+#import "PXElement+Private.h"
 #import "PXElement.h"
-#import "PXText.h"
-#import "PXNode.h"
 #import "PXNode+Private.h"
+#import "PXNode.h"
+#import "PXText.h"
 
-#import "PXDocument.h"
 #import "PXDocument+Private.h"
+#import "PXDocument.h"
 
 @interface PXDocument ()
+
 @property (nonatomic, readonly) NSMapTable *documentNodes;
 @end
 
@@ -30,15 +32,25 @@
 
 + (instancetype)documentNamed:(NSString *)name inBundle:(NSBundle *)bundle
 {
+    return [self documentNamed:name inBundle:bundle usingElementClasses:@{}];
+}
+
++ (instancetype)documentNamed:(NSString *)name inBundle:(NSBundle *)bundle usingElementClasses:(NSDictionary *)elementClasses
+{
     NSString *path = [bundle pathForResource:name ofType:nil];
     NSData *data = [NSData dataWithContentsOfFile:path];
-    return data ? [self documentWithData:data] : nil;
+    return data ? [self documentWithData:data usingElementClasses:elementClasses] : nil;
 }
 
 + (instancetype)documentWithData:(NSData *)data
 {
+    return [self documentWithData:data usingElementClasses:@{}];
+}
+
++ (instancetype)documentWithData:(NSData *)data usingElementClasses:(NSDictionary *)elementClasses
+{
     xmlDocPtr doc = xmlReadMemory([data bytes], (int)[data length], "", nil, XML_PARSE_RECOVER);
-    return doc ? [[self alloc] initWithXMLDoc:doc] : nil;
+    return doc ? [[self alloc] initWithXMLDoc:doc elementClasses:elementClasses] : nil;
 }
 
 #pragma mark Life-cycle
@@ -50,7 +62,12 @@
 
 - (id)initWithElementName:(NSString *)name namespace:(NSString *)ns prefix:(NSString *)prefix
 {
-    self = [self initWithXMLDoc:xmlNewDoc(BAD_CAST "1.0")];
+    return [self initWithElementName:name namespace:ns prefix:prefix elementClasses:@{}];
+}
+
+- (id)initWithElementName:(NSString *)name namespace:(NSString *)ns prefix:(NSString *)prefix elementClasses:(NSDictionary *)elementClasses
+{
+    self = [self initWithXMLDoc:xmlNewDoc(BAD_CAST "1.0") elementClasses:elementClasses];
     if (self) {
         xmlNodePtr node = xmlNewNode(NULL, BAD_CAST[name UTF8String]);
         xmlDocSetRootElement(_xmlDoc, node);
@@ -64,7 +81,7 @@
 
 - (id)initWithElement:(PXElement *)element
 {
-    self = [self initWithXMLDoc:xmlNewDoc(BAD_CAST "1.0")];
+    self = [self initWithXMLDoc:xmlNewDoc(BAD_CAST "1.0") elementClasses:element.document.elementClasses];
     if (self) {
         xmlNodePtr node = xmlCopyNode(element.xmlNode, 1);
         xmlDocSetRootElement(_xmlDoc, node);
@@ -75,8 +92,14 @@
 
 - (id)initWithXMLDoc:(xmlDocPtr)xmlDoc
 {
+    return [self initWithXMLDoc:xmlDoc elementClasses:@{}];
+}
+
+- (instancetype)initWithXMLDoc:(xmlDocPtr)xmlDoc elementClasses:(NSDictionary *)elementClasses
+{
     self = [super init];
     if (self) {
+        _elementClasses = [elementClasses copy];
         _xmlDoc = xmlDoc;
         _documentNodes = [NSMapTable strongToWeakObjectsMapTable];
     }
@@ -136,7 +159,7 @@
     if (node == nil) {
         switch (xmlNode->type) {
         case XML_ELEMENT_NODE:
-            node = [[PXElement alloc] initWithDocument:self xmlNode:xmlNode];
+            node = [self elementWithXmlNode:xmlNode];
             break;
 
         case XML_TEXT_NODE:
@@ -151,6 +174,16 @@
     }
 
     return node;
+}
+
+- (PXElement *)elementWithXmlNode:(xmlNodePtr)xmlNode
+{
+    PXQName *qualifiedName = [PXElement qualifiedNameOfXmlElementNode:xmlNode];
+    Class elementClass = [self.elementClasses objectForKey:qualifiedName];
+    if (elementClass == nil) {
+        elementClass = [PXElement class];
+    }
+    return [[elementClass alloc] initWithDocument:self xmlNode:xmlNode];
 }
 
 @end

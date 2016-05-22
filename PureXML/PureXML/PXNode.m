@@ -12,13 +12,13 @@
 
 #import "NSString+PureXML.h"
 
-#import "PXDocument.h"
 #import "PXDocument+Private.h"
+#import "PXDocument.h"
 #import "PXElement.h"
 #import "PXText.h"
 
-#import "PXNode.h"
 #import "PXNode+Private.h"
+#import "PXNode.h"
 
 @interface PXNode ()
 @property (nonatomic, readwrite, assign) xmlNodePtr xmlNode;

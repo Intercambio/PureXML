@@ -16,11 +16,11 @@ FOUNDATION_EXPORT const unsigned char PureXMLVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <PureXML/PublicHeader.h>
 
-#import <PureXML/PXQName.h>
 #import <PureXML/PXDocument.h>
-#import <PureXML/PXNode.h>
-#import <PureXML/PXElement.h>
-#import <PureXML/PXText.h>
-#import <PureXML/PXInputStream.h>
-#import <PureXML/PXOutputStream.h>
 #import <PureXML/PXDocumentValueTransformer.h>
+#import <PureXML/PXElement.h>
+#import <PureXML/PXInputStream.h>
+#import <PureXML/PXNode.h>
+#import <PureXML/PXOutputStream.h>
+#import <PureXML/PXQName.h>
+#import <PureXML/PXText.h>
