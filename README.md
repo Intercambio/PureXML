@@ -73,7 +73,7 @@ or with a namespace
  
 ### Custom Classes for Elements
 
-You can specify custom subclasses of `PXElement` that should be used for in a document for certain element types (name and namespace). To do so, you can bass a dictionary with `PXQName` objects as the key and the calsses as objects on creation of an document.
+You can specify custom subclasses of `PXElement` that should be used in a document for certain element types (name and namespace). To do so, you can pass a dictionary with `PXQName` objects as the key and the classes as objects on creation of a document.
 
 ```objc
 @interface Foo : PXElement
