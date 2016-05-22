@@ -13,6 +13,10 @@
 
 @end
 
+@interface PXFooElement : PXElement
+
+@end
+
 @interface PXElementTests : XCTestCase
 
 @end
@@ -209,8 +213,27 @@
     XCTAssertEqualObjects([root class], [PXMyElement class]);
 }
 
+- (void)testRegisteredElementClasses
+{
+    PXDocument *document = [[PXDocument alloc] initWithElementName:@"foo"
+                                                         namespace:@"http://example.com/ns2"
+                                                            prefix:@"bar"];
+
+    PXElement *root = document.root;
+    XCTAssertEqualObjects([root class], [PXFooElement class]);
+}
+
 @end
 
 @implementation PXMyElement
+
+@end
+
+@implementation PXFooElement
+
++ (void)load
+{
+    [PXDocument registerElementClass:[self class] forQualifiedName:PXQN(@"http://example.com/ns2", @"foo")];
+}
 
 @end

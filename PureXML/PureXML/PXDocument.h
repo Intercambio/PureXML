@@ -12,9 +12,15 @@ typedef struct _xmlDoc xmlDoc;
 typedef xmlDoc *xmlDocPtr;
 
 @class PXElement;
+@class PXQName;
 
 @interface PXDocument : NSObject
 
+#pragma mark Element Class Registration
++ (void)registerElementClass:(Class)elementClass forQualifiedName:(PXQName *)qualifiedName;
++ (NSDictionary *)registeredClassesByQualifiedName;
+
+#pragma mark Document Creation
 + (instancetype)documentNamed:(NSString *)name;
 + (instancetype)documentNamed:(NSString *)name inBundle:(NSBundle *)bundle;
 + (instancetype)documentNamed:(NSString *)name inBundle:(NSBundle *)bundle usingElementClasses:(NSDictionary *)elementClasses;

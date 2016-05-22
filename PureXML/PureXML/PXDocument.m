@@ -25,6 +25,35 @@
 
 @implementation PXDocument
 
+#pragma mark Element Class Registration
+
++ (NSMutableDictionary *)registeredElementClasses
+{
+    static NSMutableDictionary *registeredElementClasses;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        registeredElementClasses = [[NSMutableDictionary alloc] init];
+    });
+    return registeredElementClasses;
+}
+
++ (void)registerElementClass:(Class)elementClass forQualifiedName:(PXQName *)qualifiedName
+{
+    NSMutableDictionary *registeredElementClasses = [[self class] registeredElementClasses];
+    if (elementClass) {
+        [registeredElementClasses setObject:elementClass forKey:qualifiedName];
+    } else {
+        [registeredElementClasses removeObjectForKey:qualifiedName];
+    }
+}
+
++ (NSDictionary *)registeredClassesByQualifiedName
+{
+    return [[[self class] registeredElementClasses] copy];
+}
+
+#pragma mark Document Creation
+
 + (instancetype)documentNamed:(NSString *)name
 {
     return [self documentNamed:name inBundle:[NSBundle mainBundle]];
@@ -180,6 +209,9 @@
 {
     PXQName *qualifiedName = [PXElement qualifiedNameOfXmlElementNode:xmlNode];
     Class elementClass = [self.elementClasses objectForKey:qualifiedName];
+    if (elementClass == nil) {
+        elementClass = [[[self class] registeredClassesByQualifiedName] objectForKey:qualifiedName];
+    }
     if (elementClass == nil) {
         elementClass = [PXElement class];
     }
