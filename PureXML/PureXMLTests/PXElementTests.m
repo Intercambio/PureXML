@@ -6,8 +6,16 @@
 //  Copyright (c) 2014 Tobias Kräntzer. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
 #import <PureXML/PureXML.h>
+#import <XCTest/XCTest.h>
+
+@interface PXMyElement : PXElement
+
+@end
+
+@interface PXFooElement : PXElement
+
+@end
 
 @interface PXElementTests : XCTestCase
 
@@ -191,6 +199,41 @@
     XCTAssertNotEqualObjects(document.root.qualifiedName, otherQName);
     XCTAssertNotEqualObjects(document.root, otherQName);
     XCTAssertNotEqualObjects(otherQName, document.root);
+}
+
+- (void)testElementClasses
+{
+    NSDictionary *elementClasses = @{ PXQN(@"http://example.com/ns", @"my") : [PXMyElement class] };
+    PXDocument *document = [[PXDocument alloc] initWithElementName:@"my"
+                                                         namespace:@"http://example.com/ns"
+                                                            prefix:@"bar"
+                                                    elementClasses:elementClasses];
+
+    PXElement *root = document.root;
+    XCTAssertEqualObjects([root class], [PXMyElement class]);
+}
+
+- (void)testRegisteredElementClasses
+{
+    PXDocument *document = [[PXDocument alloc] initWithElementName:@"foo"
+                                                         namespace:@"http://example.com/ns2"
+                                                            prefix:@"bar"];
+
+    PXElement *root = document.root;
+    XCTAssertEqualObjects([root class], [PXFooElement class]);
+}
+
+@end
+
+@implementation PXMyElement
+
+@end
+
+@implementation PXFooElement
+
++ (void)load
+{
+    [PXDocument registerElementClass:[self class] forQualifiedName:PXQN(@"http://example.com/ns2", @"foo")];
 }
 
 @end

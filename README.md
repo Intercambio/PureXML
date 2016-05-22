@@ -70,6 +70,38 @@ or with a namespace
 [rootElement setValue:@"1" forAttribute:@"a" inNamespace:@"http://example.com/ns"];
 [rootElement valueForAttribute:@"a" inNamespace:@"http://example.com/ns"];
 ```
+ 
+### Custom Classes for Elements
+
+You can specify custom subclasses of `PXElement` that should be used for in a document for certain element types (name and namespace). To do so, you can bass a dictionary with `PXQName` objects as the key and the calsses as objects on creation of an document.
+
+```objc
+@interface Foo : PXElement
+
+@end
+```
+
+```objc
+NSDictionary *elementClasses = @{ PXQN(@"http://example.com/ns", @"foo") : [Foo class] };
+PXDocument *document = [[PXDocument alloc] initWithElementName:@"foo"
+                                                     namespace:@"http://example.com/ns"
+                                                        prefix:@"bar"
+                                                elementClasses:elementClasses];
+
+Foo *root = (Foo *)document.root;
+```
+
+In the example above the class `Foo` is now used for each element with the name `foo` in the namespace `http://example.com/ns` in this document. You can use this, to provide custom accessors to the content of the element.
+
+If you don't want to specify the element classes for each document, you can register them globally in you application.
+
+```objc
+[PXDocument registerElementClass:[Foo class]
+                forQualifiedName:PXQN(@"http://example.com/ns", @"foo")];
+```
+
+With this the class `Foo` is used as default for all elements with the name `foo` in the namespace `http://example.com/ns`. If you want to use a different class for an element in a document, you can overwrite the globally registered classes by providing a different class for a qualified name at creation of a document.
+
 
 ## Contributing
 
