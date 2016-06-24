@@ -6,14 +6,14 @@
 //  Copyright © 2016 Tobias Kräntzer. All rights reserved.
 //
 
-#import "PXElement.h"
 #import "PXQName.h"
+#import "PXElement.h"
 
 @implementation PXQName
 
 #pragma mark Life-cycle
 
-- (instancetype)initWithName:(NSString *)name namespace:(NSString *) namespace
+- (instancetype)initWithName:(NSString *)name namespace:(NSString *)namespace
 {
     self = [super init];
     if (self) {

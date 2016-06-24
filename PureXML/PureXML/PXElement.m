@@ -10,10 +10,11 @@
 
 #import "NSString+PureXML.h"
 
-#import "PXDocument.h"
 #import "PXDocument+Private.h"
-#import "PXNode+Private.h"
+#import "PXDocument.h"
+#import "PXElement+Private.h"
 #import "PXElement.h"
+#import "PXNode+Private.h"
 
 @implementation PXElement
 
@@ -23,16 +24,12 @@
 
 - (NSString *)name
 {
-    return self.xmlNode->name ? [NSString stringWithUTF8String:(const char *)self.xmlNode->name] : nil;
+    return [[self class] nameOfXmlElementNode:self.xmlNode];
 }
 
 - (NSString *)namespace
 {
-    if (self.xmlNode && self.xmlNode->ns && self.xmlNode->ns->href) {
-        return [NSString stringWithUTF8String:(const char *)self.xmlNode->ns->href];
-    } else {
-        return nil;
-    }
+    return [[self class] namespaceOfXmlElementNode:self.xmlNode];
 }
 
 - (NSString *)prefix
@@ -42,13 +39,7 @@
 
 - (PXQName *)qualifiedName
 {
-    NSString *name = self.name;
-    NSString *namespace = self.namespace;
-    if (name && namespace) {
-        return [[PXQName alloc] initWithName:name namespace:namespace];
-    } else {
-        return nil;
-    }
+    return [[self class] qualifiedNameOfXmlElementNode:self.xmlNode];
 }
 
 #pragma mark Content
@@ -70,7 +61,7 @@
     return [self valueForAttribute:name inNamespace:nil];
 }
 
-- (NSString *)valueForAttribute:(NSString *)name inNamespace:(NSString *) namespace
+- (NSString *)valueForAttribute:(NSString *)name inNamespace:(NSString *)namespace
 {
     xmlAttrPtr attr;
 
@@ -119,7 +110,7 @@
     [self setValue:value forAttribute:name inNamespace:nil];
 }
 
-- (void)setValue:(id)value forAttribute:(NSString *)name inNamespace:(NSString *) namespace
+- (void)setValue:(id)value forAttribute:(NSString *)name inNamespace:(NSString *)namespace
 {
     NSParameterAssert([value isKindOfClass:[NSString class]]);
 
@@ -247,7 +238,7 @@
     }
 }
 
-- (PXElement *)addElementWithName:(NSString *)name namespace:(NSString *) namespace content:(NSString *)content
+- (PXElement *)addElementWithName:(NSString *)name namespace:(NSString *)namespace content:(NSString *)content
 {
     xmlNodePtr element = xmlNewChild(self.xmlNode, NULL, BAD_CAST[name UTF8String], BAD_CAST[content UTF8String]);
 
@@ -285,6 +276,34 @@
         return [self.qualifiedName isEqual:object];
     } else {
         return [super isEqual:object];
+    }
+}
+
+@end
+
+@implementation PXElement (Private)
+
++ (NSString *)nameOfXmlElementNode:(xmlNodePtr)elementNode
+{
+    NSParameterAssert(elementNode);
+    return elementNode->name ? [NSString stringWithUTF8String:(const char *)elementNode->name] : nil;
+}
+
++ (NSString *)namespaceOfXmlElementNode:(xmlNodePtr)elementNode
+{
+    NSParameterAssert(elementNode);
+    return elementNode->ns && elementNode->ns->href ? [NSString stringWithUTF8String:(const char *)elementNode->ns->href] : nil;
+}
+
++ (PXQName *)qualifiedNameOfXmlElementNode:(xmlNodePtr)elementNode
+{
+    NSParameterAssert(elementNode);
+    NSString *name = [self nameOfXmlElementNode:elementNode];
+    NSString *namespace = [self namespaceOfXmlElementNode:elementNode];
+    if (name && namespace) {
+        return [[PXQName alloc] initWithName:name namespace:namespace];
+    } else {
+        return nil;
     }
 }
 

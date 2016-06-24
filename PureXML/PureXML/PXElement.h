@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Tobias Kräntzer. All rights reserved.
 //
 
-#import "PXQName.h"
 #import "PXNode.h"
+#import "PXQName.h"
 
 @class PXDocument;
 
@@ -25,11 +25,11 @@
 
 #pragma mark Attributes
 - (id)valueForAttribute:(NSString *)name;
-- (id)valueForAttribute:(NSString *)name inNamespace:(NSString *) namespace;
+- (id)valueForAttribute:(NSString *)name inNamespace:(NSString *)namespace;
 - (void)enumerateAttributesUsingBlock:(void (^)(NSString *name, id value, NSString *namespace, BOOL *stop))block;
 
 - (void)setValue:(id)value forAttribute:(NSString *)name;
-- (void)setValue:(id)value forAttribute:(NSString *)name inNamespace:(NSString *) namespace;
+- (void)setValue:(id)value forAttribute:(NSString *)name inNamespace:(NSString *)namespace;
 
 #pragma mark Children
 - (NSUInteger)numberOfChildren;
@@ -41,7 +41,7 @@
 - (PXElement *)elementAtIndex:(NSUInteger)index;
 - (void)enumerateElementsUsingBlock:(void (^)(PXElement *element, BOOL *stop))block;
 
-- (PXElement *)addElementWithName:(NSString *)name namespace:(NSString *) namespace content:(NSString *)content;
+- (PXElement *)addElementWithName:(NSString *)name namespace:(NSString *)namespace content:(NSString *)content;
 - (PXElement *)addElement:(PXElement *)element;
 
 @end

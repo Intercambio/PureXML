@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Tobias Kräntzer. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
 #import <PureXML/PureXML.h>
+#import <XCTest/XCTest.h>
 
 @interface PXTextTests : XCTestCase
 
