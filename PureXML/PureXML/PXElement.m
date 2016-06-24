@@ -292,7 +292,7 @@
 + (NSString *)namespaceOfXmlElementNode:(xmlNodePtr)elementNode
 {
     NSParameterAssert(elementNode);
-    return elementNode->ns->href ? [NSString stringWithUTF8String:(const char *)elementNode->ns->href] : nil;
+    return elementNode->ns && elementNode->ns->href ? [NSString stringWithUTF8String:(const char *)elementNode->ns->href] : nil;
 }
 
 + (PXQName *)qualifiedNameOfXmlElementNode:(xmlNodePtr)elementNode
