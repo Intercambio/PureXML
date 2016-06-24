@@ -11,6 +11,8 @@
 		F612A3B11BA346850014DEEE /* PXDocumentValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = F612A3AE1BA346850014DEEE /* PXDocumentValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F612A3B21BA346850014DEEE /* PXDocumentValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = F612A3AF1BA346850014DEEE /* PXDocumentValueTransformer.m */; };
 		F612A3B31BA346850014DEEE /* PXDocumentValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = F612A3AF1BA346850014DEEE /* PXDocumentValueTransformer.m */; };
+		F6564E9C1D1D42EB0082CCD0 /* missingNamespace.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6564E9A1D1D41B60082CCD0 /* missingNamespace.xml */; };
+		F6564E9D1D1D42EC0082CCD0 /* missingNamespace.xml in Resources */ = {isa = PBXBuildFile; fileRef = F6564E9A1D1D41B60082CCD0 /* missingNamespace.xml */; };
 		F681481A1BE3C32D00B4DF56 /* PXDocumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B11BA33EA3008C9594 /* PXDocumentTests.m */; };
 		F681481B1BE3C33600B4DF56 /* PXDocumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831B11BA33EA3008C9594 /* PXDocumentTests.m */; };
 		F6867C8C1C3EE963009617B5 /* PXQName.h in Headers */ = {isa = PBXBuildFile; fileRef = F6867C8A1C3EE963009617B5 /* PXQName.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -119,6 +121,7 @@
 /* Begin PBXFileReference section */
 		F612A3AE1BA346850014DEEE /* PXDocumentValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXDocumentValueTransformer.h; sourceTree = "<group>"; };
 		F612A3AF1BA346850014DEEE /* PXDocumentValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXDocumentValueTransformer.m; sourceTree = "<group>"; };
+		F6564E9A1D1D41B60082CCD0 /* missingNamespace.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = missingNamespace.xml; sourceTree = "<group>"; };
 		F68148191BE150DD00B4DF56 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		F6867C8A1C3EE963009617B5 /* PXQName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXQName.h; sourceTree = "<group>"; };
 		F6867C8B1C3EE963009617B5 /* PXQName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXQName.m; sourceTree = "<group>"; };
@@ -371,6 +374,7 @@
 				F6DC119F1BE3D06000403E4B /* simpleStream.xml */,
 				F6DC11AB1BE3D76F00403E4B /* streamHeader.xml */,
 				F6DC11AC1BE3D76F00403E4B /* element.xml */,
+				F6564E9A1D1D41B60082CCD0 /* missingNamespace.xml */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -574,6 +578,7 @@
 				F6DC11A01BE3D06000403E4B /* simpleStream.xml in Resources */,
 				F6D831C21BA33FAC008C9594 /* text.xml in Resources */,
 				F6DC11AF1BE3D76F00403E4B /* element.xml in Resources */,
+				F6564E9C1D1D42EB0082CCD0 /* missingNamespace.xml in Resources */,
 				F6D831BF1BA33F9A008C9594 /* simpleDocument.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,6 +598,7 @@
 				F6DC11A11BE3D06000403E4B /* simpleStream.xml in Resources */,
 				F6D831C31BA33FAC008C9594 /* text.xml in Resources */,
 				F6DC11B01BE3D76F00403E4B /* element.xml in Resources */,
+				F6564E9D1D1D42EC0082CCD0 /* missingNamespace.xml in Resources */,
 				F6D831C01BA33F9A008C9594 /* simpleDocument.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

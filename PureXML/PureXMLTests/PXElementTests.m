@@ -193,4 +193,11 @@
     XCTAssertNotEqualObjects(otherQName, document.root);
 }
 
+- (void)testMissingNamespace
+{
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    PXDocument *document = [PXDocument documentNamed:@"missingNamespace.xml" inBundle:bundle];
+    XCTAssertNil(document.root.qualifiedName);
+}
+
 @end
