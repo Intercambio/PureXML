@@ -26,9 +26,13 @@
     return self.xmlNode->name ? [NSString stringWithUTF8String:(const char *)self.xmlNode->name] : nil;
 }
 
-- (NSString *) namespace
+- (NSString *)namespace
 {
-    return self.xmlNode->ns->href ? [NSString stringWithUTF8String:(const char *)self.xmlNode->ns->href] : nil;
+    if (self.xmlNode && self.xmlNode->ns && self.xmlNode->ns->href) {
+        return [NSString stringWithUTF8String:(const char *)self.xmlNode->ns->href];
+    } else {
+        return nil;
+    }
 }
 
 - (NSString *)prefix
@@ -41,7 +45,7 @@
     NSString *name = self.name;
     NSString *namespace = self.namespace;
     if (name && namespace) {
-        return [[PXQName alloc] initWithName:self.name namespace:self.namespace];
+        return [[PXQName alloc] initWithName:name namespace:namespace];
     } else {
         return nil;
     }
