@@ -68,6 +68,9 @@
 
     [root setValue:@"4" forAttribute:@"a" inNamespace:@"http://example.com/ns"];
     XCTAssertEqualObjects([root valueForAttribute:@"a" inNamespace:@"http://example.com/ns"], @"4");
+
+    [root setValue:nil forAttribute:@"a"];
+    XCTAssertNil([root valueForAttribute:@"a"]);
 }
 
 - (void)testGetChildren
