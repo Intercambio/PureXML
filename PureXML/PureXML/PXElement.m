@@ -105,34 +105,61 @@
     }
 }
 
-- (void)setValue:(id)value forAttribute:(NSString *)name
+- (void)setValue:(NSString *)value forAttribute:(NSString *)name
 {
     [self setValue:value forAttribute:name inNamespace:nil];
 }
 
-- (void)setValue:(id)value forAttribute:(NSString *)name inNamespace:(NSString *)namespace
+- (void)setValue:(NSString *)value forAttribute:(NSString *)name inNamespace:(NSString *)namespace
 {
-    NSParameterAssert([value isKindOfClass:[NSString class]]);
+    if (value == nil) {
+        [self removeForAttribute:name inNamespace:namespace];
+    } else {
+        NSParameterAssert([value isKindOfClass:[NSString class]]);
 
+        xmlNsPtr ns = NULL;
+        if (namespace && ![namespace isEqualToString:self.namespace]) {
+            ns = xmlSearchNsByHref(self.document.xmlDoc, self.xmlNode, BAD_CAST[namespace UTF8String]);
+            if (ns == NULL) {
+                NSString *prefix = nil;
+                NSUInteger i = 1;
+                xmlNsPtr freeNS = NULL;
+                do {
+                    prefix = [NSString stringWithFormat:@"x%lu", (unsigned long)i++];
+                    freeNS = xmlSearchNs(self.document.xmlDoc, self.xmlNode, BAD_CAST[prefix UTF8String]);
+                } while (freeNS);
+                ns = xmlNewNs(self.xmlNode, BAD_CAST[namespace UTF8String], BAD_CAST[prefix UTF8String]);
+            }
+        }
+
+        if (ns) {
+            xmlSetNsProp(self.xmlNode, ns, BAD_CAST[name UTF8String], BAD_CAST[value UTF8String]);
+        } else {
+            xmlSetProp(self.xmlNode, BAD_CAST[name UTF8String], BAD_CAST[value UTF8String]);
+        }
+    }
+}
+
+- (void)removeForAttribute:(NSString *)name
+{
+    [self removeForAttribute:name inNamespace:nil];
+}
+
+- (void)removeForAttribute:(NSString *)name inNamespace:(NSString *)namespace
+{
     xmlNsPtr ns = NULL;
     if (namespace && ![namespace isEqualToString:self.namespace]) {
         ns = xmlSearchNsByHref(self.document.xmlDoc, self.xmlNode, BAD_CAST[namespace UTF8String]);
-        if (ns == NULL) {
-            NSString *prefix = nil;
-            NSUInteger i = 1;
-            xmlNsPtr freeNS = NULL;
-            do {
-                prefix = [NSString stringWithFormat:@"x%lu", (unsigned long)i++];
-                freeNS = xmlSearchNs(self.document.xmlDoc, self.xmlNode, BAD_CAST[prefix UTF8String]);
-            } while (freeNS);
-            ns = xmlNewNs(self.xmlNode, BAD_CAST[namespace UTF8String], BAD_CAST[prefix UTF8String]);
+        if (ns == nil) {
+            // If the namespace for the property is not defined, it is unlikely, that the property has been set.
+            return;
         }
     }
 
     if (ns) {
-        xmlSetNsProp(self.xmlNode, ns, BAD_CAST[name UTF8String], BAD_CAST[value UTF8String]);
+        xmlUnsetNsProp(self.xmlNode, ns, BAD_CAST[name UTF8String]);
     } else {
-        xmlSetProp(self.xmlNode, BAD_CAST[name UTF8String], BAD_CAST[value UTF8String]);
+        xmlUnsetProp(self.xmlNode, BAD_CAST[name UTF8String]);
     }
 }
 
