@@ -28,8 +28,11 @@
 - (id)valueForAttribute:(NSString *)name inNamespace:(NSString *)namespace;
 - (void)enumerateAttributesUsingBlock:(void (^)(NSString *name, id value, NSString *namespace, BOOL *stop))block;
 
-- (void)setValue:(id)value forAttribute:(NSString *)name;
-- (void)setValue:(id)value forAttribute:(NSString *)name inNamespace:(NSString *)namespace;
+- (void)setValue:(NSString *)value forAttribute:(NSString *)name;
+- (void)setValue:(NSString *)value forAttribute:(NSString *)name inNamespace:(NSString *)namespace;
+
+- (void)removeForAttribute:(NSString *)name;
+- (void)removeForAttribute:(NSString *)name inNamespace:(NSString *)namespace;
 
 #pragma mark Children
 - (NSUInteger)numberOfChildren;
