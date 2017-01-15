@@ -31,7 +31,7 @@
 - (void)dealloc
 {
     xmlNodePtr node = self.xmlNode;
-    if (node->parent == 0 && xmlDocGetRootElement(self.document.xmlDoc) != node) {
+    if (node != 0 && node->parent == 0 && xmlDocGetRootElement(self.document.xmlDoc) != node) {
         xmlFreeNode(node);
     }
 }
