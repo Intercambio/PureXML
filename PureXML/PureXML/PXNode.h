@@ -16,22 +16,22 @@ typedef xmlNode *xmlNodePtr;
 @interface PXNode : NSObject
 
 #pragma mark Document
-@property (nonatomic, readonly) PXDocument *document;
+@property (nonatomic, readonly, nonnull) PXDocument *document;
 
 #pragma mark Node Structure
-@property (nonatomic, readonly) PXNode *parent;
+@property (nonatomic, readonly, nullable) PXNode *parent;
 - (void)removeFromParent;
 
 #pragma mark Content
-@property (nonatomic, readonly, copy) NSString *stringValue;
+@property (nonatomic, readonly, copy, nullable) NSString *stringValue;
 
 #pragma mark XPath
-- (NSArray *)nodesForXPath:(NSString *)xpath usingNamespaces:(NSDictionary *)namespaces;
-- (void)enumerateNodesForXPath:(NSString *)xpath
-               usingNamespaces:(NSDictionary *)namespaces
-                         block:(void (^)(PXNode *element, BOOL *stop))block;
+- (nonnull NSArray *)nodesForXPath:(nonnull NSString *)xpath usingNamespaces:(nonnull NSDictionary *)namespaces;
+- (void)enumerateNodesForXPath:(nonnull NSString *)xpath
+               usingNamespaces:(nonnull NSDictionary *)namespaces
+                         block:(nullable void (^)(PXNode *_Nonnull element, BOOL *_Nonnull stop))block;
 
 #pragma mark libxml Property
-@property (nonatomic, readonly) xmlNodePtr xmlNode;
+@property (nonatomic, readonly, nonnull) xmlNodePtr xmlNode;
 
 @end
