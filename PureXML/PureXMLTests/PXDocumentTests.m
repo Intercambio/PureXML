@@ -39,14 +39,14 @@
                                                           namespace:@"http://example.com/ns"
                                                              prefix:@"bar"];
 
-    [documentA.root addElementWithName:@"a" namespace:nil content:nil];
-    [documentA.root addElementWithName:@"b" namespace:nil content:nil];
-    [documentA.root addElementWithName:@"c" namespace:nil content:nil];
+    [documentA.root addElementWithName:@"a" namespace:@"http://example.com/ns" content:nil];
+    [documentA.root addElementWithName:@"b" namespace:@"http://example.com/ns" content:nil];
+    [documentA.root addElementWithName:@"c" namespace:@"http://example.com/ns" content:nil];
 
     PXElement *element = [documentA.root elementAtIndex:1];
     PXDocument *documentB = [[PXDocument alloc] initWithElement:element];
 
-    [element addElementWithName:@"1" namespace:nil content:nil];
+    [element addElementWithName:@"1" namespace:@"http://example.com/ns" content:nil];
 
     XCTAssertEqual([element numberOfElements], 1);
     XCTAssertEqual([documentB.root numberOfChildren], 0);

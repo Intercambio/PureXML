@@ -21,7 +21,7 @@
                                                          namespace:@"http://example.com/ns"
                                                             prefix:@"bar"];
 
-    PXElement *element = [document.root addElementWithName:@"el" namespace:nil content:@"Foo"];
+    PXElement *element = [document.root addElementWithName:@"el" namespace:@"http://example.com/ns" content:@"Foo"];
 
     XCTAssertEqual([element numberOfChildren], 1);
 
