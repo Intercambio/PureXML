@@ -126,7 +126,7 @@
                                                          namespace:@"http://example.com/ns"
                                                             prefix:@"bar"];
 
-    PXElement *element = [document.root addElementWithName:@"el" namespace:nil content:nil];
+    PXElement *element = [document.root addElementWithName:@"el" namespace:@"http://example.com/ns" content:nil];
 
     XCTAssert(element, @"el");
     XCTAssert(element.namespace, @"http://example.com/ns");
@@ -147,9 +147,9 @@
                                                          namespace:@"http://example.com/ns"
                                                             prefix:@"bar"];
 
-    [document.root addElementWithName:@"a" namespace:nil content:nil];
-    PXElement *x = [document.root addElementWithName:@"x" namespace:nil content:nil];
-    PXElement *el = [[document.root elementAtIndex:0] addElementWithName:@"e" namespace:nil content:nil];
+    [document.root addElementWithName:@"a" namespace:@"http://example.com/ns" content:nil];
+    PXElement *x = [document.root addElementWithName:@"x" namespace:@"http://example.com/ns" content:nil];
+    PXElement *el = [[document.root elementAtIndex:0] addElementWithName:@"e" namespace:@"http://example.com/ns" content:nil];
     [el addElement:x];
 }
 
@@ -159,7 +159,7 @@
                                                          namespace:@"http://example.com/ns"
                                                             prefix:@"bar"];
 
-    PXElement *element = [document.root addElementWithName:@"el" namespace:nil content:nil];
+    PXElement *element = [document.root addElementWithName:@"el" namespace:@"http://example.com/ns" content:nil];
 
     XCTAssertEqual([document.root numberOfElements], 1);
     XCTAssertEqualObjects([[document.root elementAtIndex:0] name], @"el");

@@ -17,34 +17,34 @@ typedef xmlDoc *xmlDocPtr;
 @interface PXDocument : NSObject
 
 #pragma mark Element Class Registration
-+ (void)registerElementClass:(Class)elementClass forQualifiedName:(PXQName *)qualifiedName;
-+ (NSDictionary *)registeredClassesByQualifiedName;
++ (void)registerElementClass:(nonnull Class)elementClass forQualifiedName:(nonnull PXQName *)qualifiedName;
++ (nonnull NSDictionary *)registeredClassesByQualifiedName;
 
 #pragma mark Document Creation
-+ (instancetype)documentNamed:(NSString *)name;
-+ (instancetype)documentNamed:(NSString *)name inBundle:(NSBundle *)bundle;
-+ (instancetype)documentNamed:(NSString *)name inBundle:(NSBundle *)bundle usingElementClasses:(NSDictionary *)elementClasses;
-+ (instancetype)documentWithData:(NSData *)data;
-+ (instancetype)documentWithData:(NSData *)data usingElementClasses:(NSDictionary *)elementClasses;
++ (nullable instancetype)documentNamed:(nonnull NSString *)name;
++ (nullable instancetype)documentNamed:(nonnull NSString *)name inBundle:(nullable NSBundle *)bundle;
++ (nullable instancetype)documentNamed:(nonnull NSString *)name inBundle:(nullable NSBundle *)bundle usingElementClasses:(nullable NSDictionary *)elementClasses;
++ (nullable instancetype)documentWithData:(nonnull NSData *)data;
++ (nullable instancetype)documentWithData:(nonnull NSData *)data usingElementClasses:(nullable NSDictionary *)elementClasses;
 
 #pragma mark Life-cycle
-- (instancetype)init;
-- (instancetype)initWithElementName:(NSString *)name namespace:(NSString *)ns prefix:(NSString *)prefix;
-- (instancetype)initWithElementName:(NSString *)name namespace:(NSString *)ns prefix:(NSString *)prefix elementClasses:(NSDictionary *)elementClasses;
-- (instancetype)initWithElement:(PXElement *)element;
-- (instancetype)initWithXMLDoc:(xmlDocPtr)xmlDoc;
-- (instancetype)initWithXMLDoc:(xmlDocPtr)xmlDoc elementClasses:(NSDictionary *)elementClasses NS_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init;
+- (nonnull instancetype)initWithElementName:(nonnull NSString *)name namespace:(nonnull NSString *)ns prefix:(nullable NSString *)prefix;
+- (nonnull instancetype)initWithElementName:(nonnull NSString *)name namespace:(nonnull NSString *)ns prefix:(nullable NSString *)prefix elementClasses:(nullable NSDictionary *)elementClasses;
+- (nonnull instancetype)initWithElement:(nonnull PXElement *)element;
+- (nonnull instancetype)initWithXMLDoc:(nonnull xmlDocPtr)xmlDoc;
+- (nonnull instancetype)initWithXMLDoc:(nonnull xmlDocPtr)xmlDoc elementClasses:(nullable NSDictionary *)elementClasses NS_DESIGNATED_INITIALIZER;
 
 #pragma mark Element Classes
-@property (nonatomic, readonly) NSDictionary *elementClasses;
+@property (nonatomic, readonly, nullable) NSDictionary *elementClasses;
 
 #pragma mark Document Data
-- (NSData *)data;
+- (nonnull NSData *)data;
 
 #pragma mark Root Element
-@property (nonatomic, readonly) PXElement *root;
+@property (nonatomic, readonly, nonnull) PXElement *root;
 
 #pragma mark libxml Property
-@property (nonatomic, readonly) xmlDocPtr xmlDoc;
+@property (nonatomic, readonly, nonnull) xmlDocPtr xmlDoc;
 
 @end

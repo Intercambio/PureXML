@@ -11,6 +11,6 @@
 @interface PXText : PXNode
 
 #pragma mark Content
-@property (nonatomic, readwrite, copy) NSString *stringValue;
+@property (nonatomic, readwrite, copy, nullable) NSString *stringValue;
 
 @end
