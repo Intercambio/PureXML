@@ -20,7 +20,7 @@ $ brew install carthage
 To integrate PureXML into you Xcode project using Carthage, specify it in your Cartfile:
 
 ```
-github "Internetslum/PureXML" ~> 1.0
+github "Intercambio/PureXML" ~> 1.1
 ```
 
 ## Usage
