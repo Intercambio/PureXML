@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F6D8314C1BA32E2D008C9594"
+               BlueprintIdentifier = "F6D831691BA32EAB008C9594"
                BuildableName = "PureXML.framework"
-               BlueprintName = "iOS"
+               BlueprintName = "macOS"
                ReferencedContainer = "container:PureXML.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,9 +33,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F6D831561BA32E2D008C9594"
-               BuildableName = "iOSTests.xctest"
-               BlueprintName = "iOSTests"
+               BlueprintIdentifier = "F6D831721BA32EAB008C9594"
+               BuildableName = "macOSTests.xctest"
+               BlueprintName = "macOSTests"
                ReferencedContainer = "container:PureXML.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -43,9 +43,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F6D8314C1BA32E2D008C9594"
+            BlueprintIdentifier = "F6D831691BA32EAB008C9594"
             BuildableName = "PureXML.framework"
-            BlueprintName = "iOS"
+            BlueprintName = "macOS"
             ReferencedContainer = "container:PureXML.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,9 +65,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F6D8314C1BA32E2D008C9594"
+            BlueprintIdentifier = "F6D831691BA32EAB008C9594"
             BuildableName = "PureXML.framework"
-            BlueprintName = "iOS"
+            BlueprintName = "macOS"
             ReferencedContainer = "container:PureXML.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -83,9 +83,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F6D8314C1BA32E2D008C9594"
+            BlueprintIdentifier = "F6D831691BA32EAB008C9594"
             BuildableName = "PureXML.framework"
-            BlueprintName = "iOS"
+            BlueprintName = "macOS"
             ReferencedContainer = "container:PureXML.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

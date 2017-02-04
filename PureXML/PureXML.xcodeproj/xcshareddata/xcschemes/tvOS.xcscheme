@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0710"
+   LastUpgradeVersion = "0820"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F6D831691BA32EAB008C9594"
+               BlueprintIdentifier = "F6708ADC1E462986007C41D3"
                BuildableName = "PureXML.framework"
-               BlueprintName = "PureXMLOSX"
+               BlueprintName = "tvOS"
                ReferencedContainer = "container:PureXML.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,16 +26,15 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F6D831721BA32EAB008C9594"
-               BuildableName = "PureXMLOSXTests.xctest"
-               BlueprintName = "PureXMLOSXTests"
+               BlueprintIdentifier = "F6708AE41E462986007C41D3"
+               BuildableName = "tvOSTests.xctest"
+               BlueprintName = "tvOSTests"
                ReferencedContainer = "container:PureXML.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -43,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F6D831691BA32EAB008C9594"
+            BlueprintIdentifier = "F6708ADC1E462986007C41D3"
             BuildableName = "PureXML.framework"
-            BlueprintName = "PureXMLOSX"
+            BlueprintName = "tvOS"
             ReferencedContainer = "container:PureXML.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F6D831691BA32EAB008C9594"
+            BlueprintIdentifier = "F6708ADC1E462986007C41D3"
             BuildableName = "PureXML.framework"
-            BlueprintName = "PureXMLOSX"
+            BlueprintName = "tvOS"
             ReferencedContainer = "container:PureXML.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -83,9 +82,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F6D831691BA32EAB008C9594"
+            BlueprintIdentifier = "F6708ADC1E462986007C41D3"
             BuildableName = "PureXML.framework"
-            BlueprintName = "PureXMLOSX"
+            BlueprintName = "tvOS"
             ReferencedContainer = "container:PureXML.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
