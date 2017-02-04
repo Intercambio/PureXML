@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F6708ADC1E462986007C41D3"
-               BuildableName = "PureXML.framework"
-               BlueprintName = "tvOS"
+               BlueprintIdentifier = "F6708B251E462CD0007C41D3"
+               BuildableName = "watchOS.framework"
+               BlueprintName = "watchOS"
                ReferencedContainer = "container:PureXML.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F6708AE41E462986007C41D3"
-               BuildableName = "tvOSTests.xctest"
-               BlueprintName = "tvOSTests"
-               ReferencedContainer = "container:PureXML.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F6708ADC1E462986007C41D3"
-            BuildableName = "PureXML.framework"
-            BlueprintName = "tvOS"
-            ReferencedContainer = "container:PureXML.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F6708ADC1E462986007C41D3"
-            BuildableName = "PureXML.framework"
-            BlueprintName = "tvOS"
+            BlueprintIdentifier = "F6708B251E462CD0007C41D3"
+            BuildableName = "watchOS.framework"
+            BlueprintName = "watchOS"
             ReferencedContainer = "container:PureXML.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F6708ADC1E462986007C41D3"
-            BuildableName = "PureXML.framework"
-            BlueprintName = "tvOS"
+            BlueprintIdentifier = "F6708B251E462CD0007C41D3"
+            BuildableName = "watchOS.framework"
+            BlueprintName = "watchOS"
             ReferencedContainer = "container:PureXML.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
