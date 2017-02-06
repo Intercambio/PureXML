@@ -72,6 +72,15 @@
 		F6867C8D1C3EE963009617B5 /* PXQName.h in Headers */ = {isa = PBXBuildFile; fileRef = F6867C8A1C3EE963009617B5 /* PXQName.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6867C8E1C3EE963009617B5 /* PXQName.m in Sources */ = {isa = PBXBuildFile; fileRef = F6867C8B1C3EE963009617B5 /* PXQName.m */; };
 		F6867C8F1C3EE963009617B5 /* PXQName.m in Sources */ = {isa = PBXBuildFile; fileRef = F6867C8B1C3EE963009617B5 /* PXQName.m */; };
+		F68A94B71E48A18A002B15B6 /* PXDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831851BA33B0B008C9594 /* PXDocument.m */; };
+		F68A94B81E48A18A002B15B6 /* PXQName.m in Sources */ = {isa = PBXBuildFile; fileRef = F6867C8B1C3EE963009617B5 /* PXQName.m */; };
+		F68A94B91E48A18A002B15B6 /* PXNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8318C1BA33BAB008C9594 /* PXNode.m */; };
+		F68A94BA1E48A18A002B15B6 /* PXElement.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D831921BA33C17008C9594 /* PXElement.m */; };
+		F68A94BB1E48A18A002B15B6 /* PXText.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D8319F1BA33DA2008C9594 /* PXText.m */; };
+		F68A94BC1E48A18A002B15B6 /* PXInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DC11961BE3CD5C00403E4B /* PXInputStream.m */; };
+		F68A94BD1E48A18A002B15B6 /* PXOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = F6DC11A31BE3D29A00403E4B /* PXOutputStream.m */; };
+		F68A94BE1E48A18A002B15B6 /* PXDocumentValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = F612A3AF1BA346850014DEEE /* PXDocumentValueTransformer.m */; };
+		F68A94BF1E48A18A002B15B6 /* NSString+PureXML.m in Sources */ = {isa = PBXBuildFile; fileRef = F69A04001C7EF15D00308F85 /* NSString+PureXML.m */; };
 		F6914EB11C7E58FE008CBED7 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6914EB01C7E58FE008CBED7 /* libxml2.tbd */; };
 		F6914EB21C7E5913008CBED7 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F6914EB01C7E58FE008CBED7 /* libxml2.tbd */; };
 		F6914EB71C7E5956008CBED7 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6914EB51C7E5956008CBED7 /* OCHamcrest.framework */; };
@@ -937,6 +946,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F68A94BA1E48A18A002B15B6 /* PXElement.m in Sources */,
+				F68A94B81E48A18A002B15B6 /* PXQName.m in Sources */,
+				F68A94B91E48A18A002B15B6 /* PXNode.m in Sources */,
+				F68A94B71E48A18A002B15B6 /* PXDocument.m in Sources */,
+				F68A94BC1E48A18A002B15B6 /* PXInputStream.m in Sources */,
+				F68A94BF1E48A18A002B15B6 /* NSString+PureXML.m in Sources */,
+				F68A94BD1E48A18A002B15B6 /* PXOutputStream.m in Sources */,
+				F68A94BE1E48A18A002B15B6 /* PXDocumentValueTransformer.m in Sources */,
+				F68A94BB1E48A18A002B15B6 /* PXText.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1811,6 +1829,7 @@
 				F6708AF01E462987007C41D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F6708AF11E462987007C41D3 /* Build configuration list for PBXNativeTarget "tvOSTests" */ = {
 			isa = XCConfigurationList;
@@ -1819,6 +1838,7 @@
 				F6708AF31E462987007C41D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F6708B2B1E462CD0007C41D3 /* Build configuration list for PBXNativeTarget "watchOS" */ = {
 			isa = XCConfigurationList;
@@ -1827,6 +1847,7 @@
 				F6708B2D1E462CD0007C41D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F6D831451BA32E12008C9594 /* Build configuration list for PBXProject "PureXML" */ = {
 			isa = XCConfigurationList;
