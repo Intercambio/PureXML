@@ -1,6 +1,0 @@
-framework module PureXML {
-    umbrella header "PureXML.h"
-    
-    export *
-    module * { export * }
-}
